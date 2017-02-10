@@ -215,6 +215,41 @@ input
 	margin-top: 20px;
 }
 
+.button-end {
+    background: url(send2.png) no-repeat center; 
+    border-style: solid;
+    border-color:#ff5d55;
+    border-width: 5px;
+    color: #ff5d55;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    isplay:flex;
+	justify-content:center;
+	align-items:center;
+	margin-top: 20px;
+}
+
+
+
+.button-sum{
+    
+    border-style: solid;
+    border-color:#ff5d55;
+    border-width: 5px;
+    color: #ff5d55;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    isplay:flex;
+	justify-content:center;
+	align-items:center;
+	margin-top: 20px;
+}
 #add, #sub{
 /*    border-style: solid;
     border-color: #ff5d55;*/
@@ -228,4 +263,99 @@ input
 
 .inviteFriends {
 	text-align: center; 
+}
+
+
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+	width: 100%;
+}
+.span_3_of_4 {
+	width: 74.6%;
+}
+.span_2_of_4 {
+	width: 49.2%;
+}
+.span_1_of_4 {
+	width: 23.8%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
+}
+
+
+#locations {
+	color: #ffa834 ;
+	font-size: 24px; 
+	font-family: Helvetica;
+}
+
+
+#lodging {
+	color: #00c8f8 ;
+	font-size: 24px; 
+	font-family: Helvetica;
+}
+
+#activities {
+	color: #72bb53;
+	font-size: 24px; 
+	font-family: Helvetica;
+}
+
+#transportation {
+	color: #ff5d55;
+	font-size: 24px; 
+	font-family: Helvetica;
+}
+
+#square-loc{
+	width: 50px;
+	height: 50px;
+	background: #ffa834 ;
+	margin-bottom: 20px;
+}
+
+#square-lod{
+	width: 50px;
+	height: 50px;
+	background: #00c8f8  ;
+	margin-bottom: 20px;
+}
+
+#square-act{
+	width: 50px;
+	height: 50px;
+	background: #72bb53;
+	margin-bottom: 20px;
+}
+
+#square-trans{
+	width: 50px;
+	height: 50px;
+	background: #ff5d55;
+	margin-bottom: 20px;
+}
+
+.num {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding: 8px;
+}
+
+.desc-act {
+	color: #72bb53;;
+
+}
+
+#email-word {
+   color: #ff5d55;
+   font-size: 24px;
+}
+footer {
+	float:right;
 }
