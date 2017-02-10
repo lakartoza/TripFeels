@@ -19,26 +19,55 @@
 	 	</div>
 	  <!-- Start of two columns -->
 		<div class="section group">
-<!-- 				<div class="col span_1_of_2">
+				<div class="col span_1_of_2">
+
+
 						<div class="box">
-							<div id="show">
-								<a id="showEmail">
-									
-										<h2>
-											<img src="button.png"><div class ="tripName"> Add Trip Title</div>
-										</h2>	
-								</a>
-							</div>
+					
+							<a id="showEmail">
+								
+									<h2>
+										<img src="button.png"><div class ="tripName"> Add Trip Title</div>
+									</h2>	
+							</a>
+					
+						<div class = "inviteFriends">
 							<p style = "display: none">
+								<h3><b> Invite your friend(s): </b></h3>
+								<!-- Remind to change if there is 1 person = friend, not friends  -->
+								<div id = "sub">
+							   		<a href="javascript:void(0);" onclick="removeElement();"> - </a>
+								</div>
 								<input type="email" id="email" name="email" required placeholder="Enter a valid email address">
+								<div id = "add">
+									<a href="javascript:void(0);" onclick="addElement();"> + </a>
+								</div>
+
+
+								<div id="content"></div>
+
+								<input type="submit" class = "button" value = "">
 							</p>
 						</div>
 					</div>
-				</div> -->
+
+
+
+
+
+
+
+
+
+
+
+				</div>
 				<!-- Second Box -->
 				<div class="col span_1_of_2">
 				
 					<div class="box">
+					<!-- 	<a href="#" id="hoverelement"><h4>+</h4> </a> -->
+						 
 						<div id="show">
 							<a id="showEmail">
 								
@@ -47,9 +76,25 @@
 									</h2>	
 							</a>
 						</div>
-						<p style = "display: none">
-							<input type="email" id="email" name="email" required placeholder="Enter a valid email address">
-						</p>
+						<div class = "inviteFriends">
+							<p style = "display: none">
+								<h3><b> Invite your friend(s): </b></h3>
+								<!-- Remind to change if there is 1 person = friend, not friends  -->
+								<div id = "sub">
+							   		<a href="javascript:void(0);" onclick="removeElement();"> - </a>
+								</div>
+								<input type="email" id="email" name="email" required placeholder="Enter a valid email address
+								"> 
+								<div id = "add">
+									<a href="javascript:void(0);" onclick="addElement();"> + </a>
+								</div>
+
+
+								<div id="content"></div>
+
+								<input type="submit" class = "button" value = "">
+							</p>
+						</div>
 					</div>
 			
 				</div>
@@ -71,6 +116,8 @@
 	<!-- Connect to JS external file -->
 	<script src="script.js"></script>
 
+	<!-- Awesome Font -->
+	<script src="https://use.fontawesome.com/4961f5e8db.js"></script>
 
 </body> 
 </html>

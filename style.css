@@ -4,6 +4,12 @@ html {
 
 a {
 	color: #ff5d55;
+	text-decoration: none;
+}
+
+a:link{
+	text-decoration: none;
+	color: #ff5d55;
 }
 
 a:hover {
@@ -11,7 +17,18 @@ a:hover {
 	color: #ff5d55;
 }
 
-h2 {
+a:visted {
+	text-decoration: none;
+	color: #ff5d55;
+}
+
+a:active{
+	text-decoration: none;
+	color: #ff5d55;
+}
+
+
+h2, h3{
 	color: #ff5d55;
 	display:flex;
 	justify-content:center;
@@ -19,6 +36,20 @@ h2 {
     text-align: center;
     padding: 20px;
 }
+
+h4{
+    color: #ff5d55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 138px;
+    margin: 20px;
+    font-size: 53px;
+
+ }
+
+
 /*  SECTIONS  */
 .section
 {
@@ -105,22 +136,26 @@ s
 {
     width: 250px;
     height: 40px;
-
     color: #ff5d55;
     border-width: 5px;
     border-style: solid;
+    padding: 24px;
+    padding-left: 31px;
+    text-align: center;
+    font-size: 15px;
 
 }
+
 input
 {
-	display:flex;
-	justify-content:center;
-	align-items:center;
+	justify-content: center;
+    align-items: center;
     text-align: center;
-	margin: auto;
+    margin: 5px;
     color: #ff5d55;
     background-color: #f7f6f6;
     border-style: none;
+    display: inline-block;
 }
 
 ::-webkit-input-placeholder {
@@ -150,7 +185,8 @@ input
 	align-items:center;
     text-align: center;
     letter-spacing: 5px;
-    	color: #ff5d55;
+    color: #ff5d55;
+    padding: 20px;
 }
 
 
@@ -160,4 +196,36 @@ input
 
 .hide{
   display: none;
+}
+
+.button {
+    background: url(submit.png) no-repeat center; 
+    border-style: solid;
+    border-color:#ff5d55;
+    border-width: 5px;
+    color: #ff5d55;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    isplay:flex;
+	justify-content:center;
+	align-items:center;
+	margin-top: 20px;
+}
+
+#add, #sub{
+/*    border-style: solid;
+    border-color: #ff5d55;*/
+    margin: 10px;
+    padding-left: 8px;
+    font-size: 37px;
+    width: 8%;
+    margin: auto;
+    display: inline-block;
+}
+
+.inviteFriends {
+	text-align: center; 
 }
