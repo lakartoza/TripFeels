@@ -158,6 +158,23 @@ input
     display: inline-block;
 }
 
+#welcome-src {
+	    
+    border-style: dashed;
+    border-color:#ff5d55;
+    border-width: 5px;
+    color: #ff5d55;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    isplay:flex;
+	justify-content:center;
+	align-items:center;
+	margin-top: 20px;
+}
+
 ::-webkit-input-placeholder {
     color: #ff5d55;
 }
@@ -215,8 +232,43 @@ input
 	margin-top: 20px;
 }
 
+.button-wel {
+    background-color: none;
+    border-style: solid;
+    border-color:#ff5d55;
+    border-width: 5px;
+    color: #ff5d55;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    isplay:flex;
+	justify-content:center;
+	align-items:center;
+	margin-top: 20px;
+}
+
 .button-end {
     background: url(send2.png) no-repeat center; 
+    border-style: solid;
+    border-color:#ff5d55;
+    border-width: 5px;
+    color: #ff5d55;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    isplay:flex;
+	justify-content:center;
+	align-items:center;
+	margin-top: 20px;
+}
+
+
+.button-home {
+    background: url(home.png) no-repeat center; 
     border-style: solid;
     border-color:#ff5d55;
     border-width: 5px;
@@ -356,6 +408,18 @@ input
    color: #ff5d55;
    font-size: 24px;
 }
+
+#email-wel{
+	color: #ff5d55;
+    font-size: 24px;
+    padding-bottom: 6px;
+    display: inline-flex;
+}
+
+#welcome-text{
+	display: block;
+}
+
 footer {
 	float:right;
 }
