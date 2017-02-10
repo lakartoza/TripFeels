@@ -1,0 +1,27 @@
+img { 
+   position: relative; 
+   background-color: "blue";
+}
+.rss.opacity {-webkit-filter: opacity(50%); filter: opacity(50%);}
+
+.ideaTitle { 
+   position: relative; 
+   top: 0; 
+   left: 120px; 
+   width: 100%; 
+}
+
+.note-creator {
+    position: absolute;
+    left: 840px; 
+    top: 200px;
+    display: inline-block;
+    background-color: #ff5d55;
+}
+
+.nav_buttons {
+    position: absolute;
+    left: 840px; 
+    top: 280px;
+    display: inline-block;
+}

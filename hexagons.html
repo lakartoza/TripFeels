@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="hexagons.css">
+	<!-- jQuery -->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+</head>
+<body> 
+
+	<div class="container"> 
+		<div class="page-header">
+	    	<h1>Trip Feels</h1>      
+	 	</div>
+	  <!-- Start of two columns -->
+		<div class="section group" id="app-holder">
+
+            <div>
+                <span class="ideaTitle">A great idea!</span>
+                <img src="hexagon.png">
+            </div>
+		</div>
+         <div class="note-creator">
+                    <input
+                        type="text"
+                        id="form_title"
+                        placeholder="Add an idea..."
+                        class=""
+                    >
+                    <div class="">
+                    <button
+                        onclick="add_idea()" >
+                        Make Note!
+                    </button>
+                    </div>
+                </div>
+                <div class="nav_buttons">
+                    <a href="index.html">
+                        <img src="back.png"> 
+                    </a>     
+                    <a href="print.html">
+                        <img src="save.png">
+                    </a>
+                </div>
+	   <!-- End of two columns -->
+			
+	</div>
+
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- Connect to JS external file -->
+	<script src="hexagons.js"></script>
+
+	<!-- Awesome Font -->
+	<script src="https://use.fontawesome.com/4961f5e8db.js"></script>
+
+</body> 
+</html>
