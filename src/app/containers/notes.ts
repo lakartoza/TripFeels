@@ -9,34 +9,6 @@ import { Component } from '@angular/core';
     .creator {
       margin-bottom: 40px;
     }
-    .hexagon {
-      position: relative;
-      width: 140px; 
-      height: 80.83px;
-      background-color: #64C7CC;
-      margin: 40.41px 0;
-    }
-
-    .hexagon:before,
-    .hexagon:after {
-      content: "";
-      position: absolute;
-      width: 0;
-      border-left: 70px solid transparent;
-      border-right: 70px solid transparent;
-    }
-
-    .hexagon:before {
-      bottom: 100%;
-      border-bottom: 40.41px solid #64C7CC;
-    }
-
-    .hexagon:after {
-      top: 100%;
-      width: 0;
-      border-top: 40.41px solid #64C7CC;
-    }
-
   `],
   template: `
     <div class="row center-xs notes">

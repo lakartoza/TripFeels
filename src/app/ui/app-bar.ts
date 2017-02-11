@@ -6,12 +6,11 @@ import { Component } from '@angular/core';
     .app-bar {
       height: 65px;
       padding: 5px 30px;
-      background-color: #FFFFFF;
+      background-color: #00BCD4;
     }
     .logo {
-      color: #ff5d55;
+      color: white;
       font-size: 30px;
-      /* font-family: "Open Sans";*/
       font-weight: 300;
       cursor: pointer;
     }
@@ -25,7 +24,7 @@ import { Component } from '@angular/core';
   template: `
     <header class="app-bar row middle-xs">
       <span class="logo col-xs-10">
-        <b>Trip Feels</b> - Trip Summer 2017
+        Retain
       </span>
       <nav class="col-xs-2">
         <div class="row middle-xs between-xs">

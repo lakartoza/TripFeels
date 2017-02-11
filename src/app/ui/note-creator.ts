@@ -37,7 +37,7 @@ import {
           (focus)="toggle(true)"
           [(ngModel)]="newNote.value"
           name="newNoteValue"
-          placeholder="Add an idea..."
+          placeholder="Take a note..."
           class="col-xs-10"
         >
         <div class="actions col-xs-12 row between-xs" *ngIf="fullForm">
@@ -65,7 +65,7 @@ export class NoteCreator {
   newNote = {
     title: '',
     value: '',
-    color: '#ff5d55'
+    color: 'white'
   };
   fullForm: boolean = false;
 
@@ -84,7 +84,7 @@ export class NoteCreator {
     this.newNote = {
       title: '',
       value: '',
-      color: '#ff5d55'
+      color: 'white'
     };
   }
 
