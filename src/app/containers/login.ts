@@ -20,7 +20,7 @@ import { Component } from '@angular/core'
         <input id = "email" type="text" required placeholder="Enter your email"> 
         <input id = "pass" type="text" required placeholder="********"> 
     </form>
-	<input type="submit" class = "button" value = "Login!">
+	<input type="submit" class ="btn btn-primary" value = "Login!">
 
 
     </div>
