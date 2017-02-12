@@ -30,7 +30,7 @@ import { Component } from '@angular/core';
       <nav class="col-xs-2">
         <div class="row middle-xs between-xs">
           <span [routerLink]="['', 'about']" class="link">About</span>
-          <span class="link">signout</span>
+          <span [routerLink]="['', 'login']" class="link">signout</span>
         </div>
       </nav>
     </header>

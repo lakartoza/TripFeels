@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser'
 import { FormsModule } from '@angular/forms';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 import { App, routes } from './app'
-import { Main, Notes, About } from './app/containers'
+import { Main, Notes, About, Login } from './app/containers'
 import { 
   AppBar,
   NoteCard,
@@ -20,7 +20,8 @@ import {
     Notes,
     NoteCreator,
     ColorPicker,
-    About
+    About,
+    Login
   ],
   imports: [BrowserModule, FormsModule, routes],
   bootstrap: [App]
