@@ -2,7 +2,8 @@ import { NgModule }      from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { FormsModule } from '@angular/forms';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
-import { App, routes } from './app'
+import { App, providers, routes } from './app'
+import { HttpModule } from '@angular/http'
 import { Main, Notes, About, Login } from './app/containers'
 import { 
   AppBar,
@@ -23,7 +24,8 @@ import {
     About,
     Login
   ],
-  imports: [BrowserModule, FormsModule, routes],
+  providers,
+  imports: [HttpModule, BrowserModule, FormsModule, routes],
   bootstrap: [App]
 })
 export class AppModule {}

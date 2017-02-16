@@ -7,7 +7,6 @@ import { Component } from '@angular/core'
         background-color: white;
         display: inline-block;
     }
-    
   `],
     template: `
     <div class="login-container">
