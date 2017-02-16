@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
 
 @Component({
-    selector: 'about-container',
+    selector: 'trips-container',
     styleUrls: [`app/containers/about.component.css`],
     template: `
 
@@ -48,4 +48,4 @@ import { Component } from '@angular/core'
     </div> 
     
     `
-}) export class About {}
+}) export class Trips {}
