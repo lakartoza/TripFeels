@@ -16,7 +16,7 @@ import { Component } from '@angular/core'
                 <input type="text" id="name" name="name" required placeholder="NAME"> <p>
                 <input type="email" id="email" name="email" required placeholder="EMAIL ADDRESS"><p>
                 <input type="text" id="pw" name="pw" required placeholder=" PASSWORD"> <p>
-                <a href="add-trip">
+                <a [routerLink]="['', 'trips']">
                     <input type="submit" class = "button-login" value = "START B-STORMING">
                 </a>
             </div>
