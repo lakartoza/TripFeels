@@ -58,7 +58,7 @@ import { Component } from '@angular/core';
 
             <div id = "home">
      
-              <span [routerLink]="['', 'login']" class="link"><i class="fa fa-home fa-2x" aria-hidden="true"></i></span>
+              <span [routerLink]="['', '']" class="link"><i class="fa fa-home fa-2x" aria-hidden="true"></i></span>
 
               <div class="row middle-xs between-xs">
                 <span [routerLink]="['', 'about']" class="link"><i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i></span>

@@ -9,7 +9,8 @@ export const routes: ModuleWithProviders = RouterModule.forRoot([
         children: [
             { path: 'notes', component: Notes},
             { path: 'addtrip', component: AddTrip },
-            { path: 'login', component: Login },
+            { path: 'about', component: About },
+            { path: '', component: Login },
             { path: 'trips', component: Trips }
         ]
     },
