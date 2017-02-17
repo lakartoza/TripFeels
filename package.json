@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "webpack --config webpack.spec.ts --progress --color && karma start",
-    "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached  --content-base src",
-    "api": "angularclass-server --api retain "
+    "start": "concurrently --kill-others \"webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 3000 --content-base src\" \"angularclass-server --api retain --port 3500\"",
+    "api": "angularclass-server --api retain --port 3500"
   },
   "author": "",
   "license": "ISC",
@@ -20,10 +20,9 @@
     "@angular/platform-browser-dynamic": "^2.0.0",
     "@angular/router": "^3.0.0",
     "@angularclass/api": "^1.2.0",
+    "concurrently": "^3.3.0",
     "core-js": "^2.4.1",
-    "dragula": "^3.7.2",
     "lodash": "^4.16.1",
-    "ng2-dragula": "^1.3.0",
     "rxjs": "^5.0.0-beta.12",
     "zone.js": "0.7.2"
   },
