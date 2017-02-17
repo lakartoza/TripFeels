@@ -27,14 +27,9 @@ import { Component } from '@angular/core'
 				
 			</div>
 			<div class="col span_1_of_2">
-
-				<div id = "sub">
-			   		<a href="javascript:void(0);" onclick="removeElement();"> - </a>
-				</div>	
-				<div *ngFor="email of emails" class ="input">
+				
 						<input  type="email" id="email" name="email" required placeholder=" ADD E-MAIL "> 
-						{{email}}
-				</div>
+			
 			</div>
 		</div>
 
@@ -48,9 +43,9 @@ import { Component } from '@angular/core'
     
     `
 }) export class Trips {
-	var emails:any = {};
+	/* var emails:any = {};
 
-
-    	emails = ['First', 'Second', 'Third'];
- 
+	constructor (){
+    	this.emails = ['First', 'Second', 'Third'];
+    } */ 
 }
