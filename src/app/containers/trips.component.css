@@ -105,6 +105,7 @@ input
   display: block;
   width: 50%;
   font-style: bold;
+
 }
 
 .button-hex {
@@ -115,8 +116,31 @@ input
   border: 1px solid #ffc957;
   background-color: #ffc957;
   z-index: 3;
+  position: relative;
+    top: 10px;
+    left: 29px;
+    right: 30px;
  
 
+}
+
+.fa, .fa-plus {
+	-ms-transform: rotate(-30deg); /* IE 9 */  
+	-webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+	transform: rotate(-30deg);
+	color:  #ffc957;
+	font-size: 50px;
+	display:block;
+	height: 40px;
+	width: 40px;
+/*	border-radius: 50%;
+	border: 1px solid #ffc957;
+	background-color: #ffc957;*/
+	z-index: 3;
+	position: relative;
+	top: 8px;
+    left: 26px;
+    right: 30px;
 }
 .page-header{
   border-bottom: none;
@@ -252,7 +276,7 @@ p #slogan {
 	width: 100%;
 }
 .span_1_of_2 {
-	width: 49.2%;
+	width: 28.2%%;
 }
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */

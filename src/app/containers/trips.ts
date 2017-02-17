@@ -2,13 +2,10 @@ import { Component } from '@angular/core'
 
 @Component({
     selector: 'trips-container',
-    styleUrls: [`app/containers/about.component.css`],
+    styleUrls: [`app/containers/trips.component.css`],
     template: `
 
     <div class = "container">
-     
-
-
         <h4> ADD NEW TRIP </h4> <p>
         <div class="section group">
 			<div class="col span_1_of_2">
@@ -21,23 +18,20 @@ import { Component } from '@angular/core'
 	    <h4> ADD FRIENDS </h4> <p>
         <div class="section group">
 			<div class="col span_1_of_2">
-				<div class = "tiny-hex" ></div> 
-				<div class ="button-hex">
+				<div class = "tiny-hex" >
+				 		<div class = "plus"  >
+							<i class="fa fa-plus-circle" aria-hidden="true"></i>
+						</div>
+				</div> 
+
+				
 			</div>
 			<div class="col span_1_of_2">
-			<input type="email" id="email" name="email" required placeholder=" ADD E-MAIL "> 
+				
+						<input  type="email" id="email" name="email" required placeholder=" ADD E-MAIL "> 
+			
 			</div>
 		</div>
-        <div class="section group">
-			<div class="col span_1_of_2">
-				<div class = "tiny-hex" ></div> 
-			</div>
-			<div class="col span_1_of_2">
-			<input type="email" id="email" name="email" required placeholder=" ADD E-MAIL "> 
-			</div>
-		</div>
-
-
 
 		<div id = "instruct">
 	        Invite other users to collaborate on your trip planning. Once you begin your B-storm, your selected users will receive an email invite.
@@ -48,4 +42,10 @@ import { Component } from '@angular/core'
     </div> 
     
     `
-}) export class Trips {}
+}) export class Trips {
+	/* var emails:any = {};
+
+	constructor (){
+    	this.emails = ['First', 'Second', 'Third'];
+    } */ 
+}
