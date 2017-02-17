@@ -3,14 +3,7 @@ import { NoteService } from '../services';
 
 @Component({
   selector: 'notes-container',
-  styles: [`
-    .notes {
-      padding-top: 50px;
-    }
-    .creator {
-      margin-bottom: 40px;
-    }
-  `],
+  styleUrls: [`app/containers/notes.component.css`],
   template: `
     <div class="row center-xs notes">
       <div class="col-xs-6 creator">
