@@ -1,0 +1,40 @@
+.card {
+  position: relative;
+  width: 300px; 
+  height: 173.21px;
+  background-color: #64C7CC;
+  margin: 86.60px 0;
+}
+
+.card:before,
+.card:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+}
+
+
+.card:before {
+  bottom: 100%;
+  border-bottom: 86.60px solid #64C7CC;
+}
+
+.card:after {
+  top: 100%;
+  width: 0;
+  border-top: 86.60px solid #64C7CC;
+}
+
+.col-xs-10, {
+	margin: 20px;
+}
+input {
+	color: #ffc957;
+	margin: 20px;
+}
+
+.btn-light {
+	background-color: #ffc957;
+}

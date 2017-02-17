@@ -19,8 +19,25 @@ import {
     .full {
       height: 100px;
     }
+
+input
+{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+    color: #ffc957;
+    border-style: none;
+    display: inline-block;
+    width: 100%;
+    height: 34px;
+}
+    .btn-light {
+      color:#ffc957; 
+    }
   `],
   template: `
+    <h1> Add an idea + color! </h1>
     <div class="note-creator shadow-2" [ngStyle]="{'background-color': newNote.color}">
       <form class="row" (ngSubmit)="onCreateNote()">
         <input
