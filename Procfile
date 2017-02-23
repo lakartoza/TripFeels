@@ -1,2 +1,1 @@
-web: npm run api
-web: npm start
+web: node ./dist/server/bin/www.js

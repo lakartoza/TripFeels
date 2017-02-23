@@ -1,60 +1,65 @@
-<p align="center">
-  <a href="http://courses.angularclass.com/courses/angular-2-fundamentals" target="_blank">
-    <img alt="Angular 2 Fundamentals" src="https://res.cloudinary.com/angularclass/image/upload/v1468640978/courses-logo-large.png">
-  </a>
-</p>
+<img width="150" src="https://i.cloudup.com/zfY6lL7eFa-3000x3000.png" />
+<img width="50" src="https://angular.io/resources/images/logos/angular2/angular.svg" />
 
-# Angular 2 Fundamentals: Retain App
+## Angular2 Express Starter ( Advanced )
 
-> Google Keep remake application for [Angular 2 Fundamentals course](https://angularclass.com/courses)
+- Angular 2 ( 2.x )
+- ExpressJS ( 4.x - with compression )
+- Webpack ( angular-cli )
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-----------
+## Concepts
 
+- Redux ( NgRx/Store - with server calls)
+- Smart & dumb components
+- AOT: Ahead-of-Time compilation
+- Advanced routing ( lazy loading, router outlets...)
 
-# Overview
-This repo is designed to accompany the free [Angular 2 Fundamentals course](https://angularclass.com/courses). It is a step by step curriculum introducing you to Angular 2 by rebuilding [Google Keep](). All lessons are broken down into individual branches, with a start and solution branch for each lesson. We recommend taking the course which includes the videos and text descriptions for each lesson to maximize your learnings!
+## Support
 
+If you’d like to support me developing this project you’re able to do so by donating on PayPal or if you have any special needs/ feature requests don’t hesitate to send me an email.
 
-# Dependencies
-* `Node > 6.x`
-* `npm > 3.x`
-* globals (`npm install --global`)
-    * `typescript`
-    * `webpack`
-    * `webpack-dev-server`
-    * `tslint`
+[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/ngsemantic)
 
 
-# Getting Started
+## Install / Development
 
-- Clone or fork this repository
-- run `npm install --global typescript webpack webpack-dev-server tslint`
-- run `npm install`
-- run `npm start` to fire up dev server
-- open browser to [`http://localhost:3000`](http://localhost:3000)
+```bash
+git clone https://github.com/vladotesanovic/angular2-express-starter
+cd angular2-express-starter
 
-# Workflow
-* Start the course 
-* What the video for the current lesson
-* Checkout to the appropriate branch for the lesson
-* Follow along and build the app!
+# Install dependencies
+npm install
 
-# Instructor
-<table>
-  <tbody>
-    <tr>
-      <td align="center">
-        <img width="150 height="150"
-        src="https://avatars.githubusercontent.com/Hendrixer?v=3">
-        <br />
-        <a href="https://github.com/Hendrixer">Scott Moss</a>
-      </td>
-    </tr>
-  <tbody>
-</table>
+# start server
+npm run start
 
-# Introduction Video
+# Client url: http://localhost:4200
+# Application ( epxress ) API: http://localhost:4300
+```
 
-[![Angular 2 Fundamentals](https://cloud.githubusercontent.com/assets/1016365/17240276/33ec0830-551f-11e6-94f8-a69846e322f9.png)](http://www.youtube.com/watch?v=ANM1xv0uJ7g)
+Install Redux DevTools chrome extenstion:
+
+https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd
+
+## Build / Production
+
+```bash
+
+npm run build
+
+## Deploy dist folder to app server
+
+Structure of dist folder:
+
+/dist/server <-- expressjs
+/dist/client <-- angular2
+
+```
+
+## Note
+
+All html and css are from: http://www.w3schools.com/howto/
+
 
