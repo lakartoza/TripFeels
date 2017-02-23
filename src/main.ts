@@ -10,7 +10,7 @@ import {
   AppBar,
   NoteCard,
   NoteCreator,
-  ColorPicker
+  ColorPicker,
 } from './app/ui'
 
 @NgModule({
