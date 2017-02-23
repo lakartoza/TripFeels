@@ -13,17 +13,20 @@ import {
       border-radius: 2px;
       width: 100%;
       position: relative;
+      
     }
     .title {
       font-size: 1.2rem;
       font-weight: bold;
       text-align: left;
       color: rgba(0,0,0,0.8);
+      text-transform: uppercase;
     }
     .value {
       text-align: left;
       font-size: 1.4rem;
       font-weight: 200;
+      text-transform: uppercase;
     }
     .icon {
       position: absolute;
@@ -38,6 +41,7 @@ import {
       border-radius: 100%;
       cursor: pointer;
     }
+
   `],
   template: `
     <div

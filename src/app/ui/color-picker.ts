@@ -11,18 +11,18 @@ import {
     .color-selector {
       position: relative;
     }
+
     .selector {
-      min-width: 120px;
-      border: 1px solid lightgrey;
-      padding: 10px;
-      background-color: #efefef;
-      position: absolute;
-      top: -50px;
-      left: 0;
+    min-width: 120px;
+    padding: 10px;
+    position: absolute;
+    bottom: -37px;
+    display: -webkit-box;
     }
+
     .color {
-      height: 30px;
-      width: 30px;
+      height: 50px;
+      width: 50px;
       border-radius: 100%;
       cursor: pointer;
       margin-right: 10px;
@@ -32,12 +32,28 @@ import {
       border: 2px solid darkgrey;
     }
     .icon {
-      font-size: 1.4rem;
-      color: grey;
+      font-size: 40px;
+      color: white;
       cursor: pointer;
+      float:right;
+      text-shadow: 2px 2px #b9b3b3;
+
     }
+
+    #wrapper .text {
+      position:relative;
+      bottom:30px;
+      left:0px;
+      visibility:hidden;
+    }
+
+    #wrapper:hover .text {
+      visibility:visible;
+    }
+
   `],
   template: `
+
     <div class="color-selector">
       <i (click)="showSelector(true)" class="material-icons icon">color_lens</i>
       <div class="selector row center-xs" *ngIf="isSelectorVisible">
@@ -57,6 +73,7 @@ export class ColorPicker {
   @Output() selected = new EventEmitter<string>();
   isSelectorVisible: boolean = false;
 
+
   showSelector(value: boolean) {
     this.isSelectorVisible = value;
   }
@@ -65,4 +82,5 @@ export class ColorPicker {
     this.showSelector(false);
     this.selected.next(color);
   }
+
 }

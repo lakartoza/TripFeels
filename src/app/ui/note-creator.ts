@@ -20,59 +20,110 @@ import {
       height: 100px;
     }
 
-input
-{
+    input
+    {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 5px;
+    margin: 10px 60px;
     color: #ffc957;
     border-style: none;
     display: inline-block;
-    width: 100%;
+    width: 50px;
     height: 34px;
-}
+    text-transform: uppercase;
+    }
+
     .btn-light {
-      color:#ffc957; 
+      margin-top: 20px;
+      background-color: #ffc957;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      display: block;
+      font-style: bold;
+      border-style: none;
+    }
+
+    .hexagon-wrapper {
+      text-align: center;
+      margin: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .hexagon {
+      height: 100%;
+      width: calc(100% * 0.57735);
+      display: inline-block;
+      z-index: 1;
+    }
+
+    .hexagon:before {
+      position: absolute;
+      top: 0;
+      right: calc((100% / 2) - ((100% * 0.57735) / 2));
+      background-color: inherit;
+      height: inherit;
+      width: inherit;
+      content: '';
+      transform: rotateZ(60deg);
+    }
+
+    .hexagon:after {
+      position: absolute;
+      top: 0;
+      right: calc((100% / 2) - ((100% * 0.57735) / 2));
+      background-color: inherit;
+      height: inherit;
+      width: inherit;
+      content: '';
+      transform: rotateZ(-60deg);
     }
   `],
   template: `
     <h1> Add an idea + color! </h1>
-    <div class="note-creator shadow-2" [ngStyle]="{'background-color': newNote.color}">
-      <form class="row" (ngSubmit)="onCreateNote()">
-        <input
-          type="text"
-          (focus)="toggle(true)"
-          [(ngModel)]="newNote.title"
-          name="newNoteTitle"
-          placeholder="Title"
-          class="col-xs-10 title"
-          *ngIf="fullForm"
-        >
-        <input
-          type="text"
-          (focus)="toggle(true)"
-          [(ngModel)]="newNote.value"
-          name="newNoteValue"
-          placeholder="Take a note..."
-          class="col-xs-10"
-        >
-        <div class="actions col-xs-12 row between-xs" *ngIf="fullForm">
-          <div class="col-xs-3">
-            <color-picker
-              (selected)="onColorSelect($event)"
-              [colors]="colors"
+    <div class="col-xs-12 col-lg-12">
+
+
+        <div class="note-creator shadow-2" [ngStyle]="{'background-color': newNote.color}">
+          <form class="row" (ngSubmit)="onCreateNote()">
+            <input
+              type="text"
+              (focus)="toggle(true)"
+              [(ngModel)]="newNote.title"
+              name="newNoteTitle"
+              placeholder="LOCATION"
+              class="col-xs-10 title"
+              *ngIf="fullForm"
             >
-            </color-picker>
-          </div>
-          <button
-            type="submit"
-            class="btn-light"
-           >
-            Done
-          </button>
+            <input
+              type="text"
+              (focus)="toggle(true)"
+              [(ngModel)]="newNote.value"
+              name="newNoteValue"
+              placeholder="ACTIVITY"
+              class="col-xs-10"
+            >
+            <div class="actions col-xs-12 row between-xs" *ngIf="fullForm">
+              <div class="col-xs-3">
+                <color-picker
+                  (selected)="onColorSelect($event)"
+                  [colors]="colors"
+                >
+                </color-picker>
+              </div>
+              <button
+                type="submit"
+                class="btn-light"
+               >
+                Done
+              </button>
+            </div>
+          </form>
         </div>
-      </form>
+
     </div>
   `
 })

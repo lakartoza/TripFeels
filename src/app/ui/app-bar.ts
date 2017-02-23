@@ -23,10 +23,11 @@ import { Location } from '@angular/common';
       font-weight: bold;
     }
     .logo {
-      color: white;
+      color: #ffc957;
       font-size: 30px;
       font-weight: 300;
       cursor: pointer;
+      left: 20px;
     }
     .link {
       color: #ffc957;
