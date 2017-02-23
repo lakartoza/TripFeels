@@ -3,8 +3,25 @@ import { NoteService } from '../../services';
 
 @Component({
   selector: 'notes-container',
-  styles: [`app/containers/notes/notes.css`],
-  templateUrl: 'app/containers/notes/notes.html'
+  styleUrls: [`app/containers/notes/notes.css`],
+  template: `
+  <div class="notes">
+    <div class="creator">
+    <note-creator (createNote)="onCreateNote($event)"></note-creator>
+    </div>
+    <div class="notes">
+    <ul class="" id="hexGrid">
+        <note-card
+            class="hex"
+            [note]="note"
+            *ngFor="let note of notes"
+            (checked)="onNoteChecked($event)"
+            >
+        </note-card>
+    </ul>
+    </div>
+</div>
+`
 })
 export class Notes {
   notes = [];

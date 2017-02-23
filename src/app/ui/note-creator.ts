@@ -45,42 +45,6 @@ import {
       font-style: bold;
       border-style: none;
     }
-
-    .hexagon-wrapper {
-      text-align: center;
-      margin: 20px;
-      position: relative;
-      display: inline-block;
-    }
-
-    .hexagon {
-      height: 100%;
-      width: calc(100% * 0.57735);
-      display: inline-block;
-      z-index: 1;
-    }
-
-    .hexagon:before {
-      position: absolute;
-      top: 0;
-      right: calc((100% / 2) - ((100% * 0.57735) / 2));
-      background-color: inherit;
-      height: inherit;
-      width: inherit;
-      content: '';
-      transform: rotateZ(60deg);
-    }
-
-    .hexagon:after {
-      position: absolute;
-      top: 0;
-      right: calc((100% / 2) - ((100% * 0.57735) / 2));
-      background-color: inherit;
-      height: inherit;
-      width: inherit;
-      content: '';
-      transform: rotateZ(-60deg);
-    }
   `],
   template: `
     <h1> Add an idea + color! </h1>
