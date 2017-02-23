@@ -53,7 +53,7 @@ import {
 
   `],
   template: `
-
+    
     <div class="color-selector">
       <i (click)="showSelector(true)" class="material-icons icon">color_lens</i>
       <div class="selector row center-xs" *ngIf="isSelectorVisible">

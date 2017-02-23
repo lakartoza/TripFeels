@@ -85,7 +85,13 @@ import {
   template: `
     <h1> Add an idea + color! </h1>
     <div class="col-xs-12 col-lg-12">
+      <div class = " hexagon ">
+        <div id="hex1" class="hexagon-wrapper">
 
+            <div id="color1" class="hexagon"></div>
+
+        </div>
+      </div>
 
         <div class="note-creator shadow-2" [ngStyle]="{'background-color': newNote.color}">
           <form class="row" (ngSubmit)="onCreateNote()">
@@ -123,8 +129,6 @@ import {
             </div>
           </form>
         </div>
-
-    </div>
   `
 })
 export class NoteCreator {
