@@ -20,8 +20,7 @@ import {
         <div class="hexIn">
           <a class="hexLink" href="#">
             <img src="https://static.vecteezy.com/system/resources/previews/000/093/696/original/vector-yellow-abstract-background.jpg" alt="" />
-            <div class="title">{{ note.title }}</div>
-            <div class="value">{{ note.value }}</div>
+            <p class="value">{{ note.value }}</p>
           </a>
         </div>
       </div>
