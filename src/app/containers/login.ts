@@ -1,32 +1,34 @@
-import { Component } from '@angular/core'
+import { Component } from '@angular/core';
+import { FormGroup, FormBuilder, Validators,ReactiveFormsModule} from '@angular/forms';
+import { ValidationService } from './validation.service';
 
 @Component({
     selector: 'login-container',
     styleUrls: [`app/containers/login.component.css`],
-    template: `
+    templateUrl : 'app/containers/login.html'
 
-    <div class = "container">
-
-            <!--<div class = "tiny-hex"> </div>-->
+}) export class Login {
+  userForm: any;
+  
+  constructor(private formBuilder: FormBuilder) {
+      
+    this.userForm = this.formBuilder.group({
+      'name': ['', [Validators.required, Validators.minLength(1)]],
+      'email': ['', [Validators.required, ValidationService.emailValidator]],
+      'password': ['', [Validators.required, Validators.minLength(10), ValidationService.passwordValidator]]
+    });
     
-        <div id = "section-title">
-            <h1> <b>B-STORM </b></h1>
-            <p id = "slogan"> A Brainstorming Application for Planning Trips <p>
-            <div id = "form">
-                <input type="text" id="name" name="name" required placeholder="NAME"> <p>
-                <input type="email" id="email" name="email" required placeholder="EMAIL ADDRESS"><p>
-                <input type="text" id="pw" name="pw" required placeholder=" PASSWORD"> <p>
-                <a [routerLink]="['', 'addtrip']">
-                    <input type="submit" class = "button-login" value = "START B-STORMING">
-                </a>
-            </div>
-        </div>
-        
-            <div class="hexagon"></div>
+    console.log(this.userForm);
+  }
+  
+  saveUser() {
+    if (this.userForm.dirty && this.userForm.valid) {
+      alert(`Name: ${this.userForm.value.name} Email: ${this.userForm.value.email}`);
+    }
+  }
 
-    </div> 
-    `
-}) export class Login {}
+
+}
 
 
 
