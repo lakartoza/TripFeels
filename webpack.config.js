@@ -13,6 +13,7 @@ var config = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].bundle.js',
+    publicPath: '/',
     sourceMapFilename: '[name].map',
     chunkFilename: '[id].chunk.js'
   },
