@@ -6,8 +6,6 @@
   "scripts": {
     "test": "webpack --config webpack.spec.ts --progress --color && karma start",
     "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 3000 --content-base src",
-    "production": "node server.js",
-    "bundle": "somehow",
     "api": "angularclass-server --api retain --port 3500"
   },
   "author": "",

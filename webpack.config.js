@@ -5,13 +5,13 @@ var config = {
   cache: true,
   devtool: 'source-map',
   entry: {
-    polyfills: './polyfills',
-    vendor:    './vendor',
-    main:      './main'
+    polyfills: './src/polyfills',
+    vendor:    './src/vendor',
+    main:      './src/main'
   },
 
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, '/dist'),
     filename: '[name].bundle.js',
     publicPath: '/dist/',
     sourceMapFilename: '[name].map',

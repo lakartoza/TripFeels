@@ -23,7 +23,7 @@
 // });
 
 
-const Server = require('../server.js')
+const Server = require('./server.js')
 const path = require('path')
 const port = (process.env.PORT || 3001)
 const app = Server.app()
