@@ -5,7 +5,6 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 import { App, providers, routes } from './app'
 import { HttpModule } from '@angular/http'
 import { Main, Notes, AddTrip, Login, Trips } from './app/containers'
-import { LoginComponent } from './app/containers/login-form'
 import { ReactiveFormsModule } from '@angular/forms';
 import { ControlMessagesComponent } from './app/containers/control-messages.component';
 import { ValidationService } from './app/containers/validation.service';
@@ -29,8 +28,7 @@ import {
     AddTrip,
     Login,
     Trips,
-    ControlMessagesComponent,
-    LoginComponent
+    ControlMessagesComponent
   ],
   providers: [ ValidationService ],
   imports: [HttpModule, BrowserModule, FormsModule, routes, ReactiveFormsModule],
