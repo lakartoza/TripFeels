@@ -2,7 +2,7 @@ import { Component } from '@angular/core'
 
 @Component({
     selector: 'login-container',
-    styleUrls: [`app/containers/login.component.css`],
+    styleUrls: [`/src/app/containers/login.component.css`],
     template: `
 
     <div class = "container">
