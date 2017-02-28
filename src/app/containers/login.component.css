@@ -1,5 +1,5 @@
 html {
-
+    color: #ffc957;
 }
 
 a {
@@ -29,35 +29,17 @@ a:active{
 
 
 
-h1{
+h1, h2, h3{
   color: #ffc957;
   display:flex;
   justify-content:center;
   align-items:center;
   text-align: center;
   color: #ffc957;
+
+
 }
 
-
-h2{
-  color: #000;
-  font-size: 14px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align: center;
-}
-
-
-h3{
-  color: #ffc957;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align: center;
-  color: #ffc957;
-  font-size: 15px;
-}
 h4{
     color: #ffc957;
     display: flex;
@@ -102,7 +84,7 @@ input
 }
 
 .button-login {
-  margin: 20px auto;
+  margin-top: 20px;
   background-color: #ffc957;
   color: white;
   justify-content: center;
@@ -111,10 +93,7 @@ input
   border-radius: 5px;
   display: block;
   width: 73%;
-  height: 30px;
   font-style: bold;
-  border-style: none;
-
 }
 
 .page-header{
@@ -179,7 +158,9 @@ p {
     position: absolute;
 
 }
-
+p #slogan {
+  margin: 20px;
+}
 
 .tiny-hex {
   position: relative;
@@ -213,35 +194,3 @@ p {
   border-top: 57.74px solid #64C7CC;
 }
 
-control-messages div {
-  color: #64C7CC;
-  margin: 6px 0;
-}
-
-.form-input {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    margin: auto;
-
-}
-
-.slogan {
-  margin: auto;
-}
-
-.account-options {
-    display: flex;
-    font-size: 14px;
-    margin: auto;
-    justify-content: center;
-}
-
-#create {
-   color: #ffc957;
-}
-
-#login-acc {
-  color: black;
-}
