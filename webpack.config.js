@@ -11,7 +11,7 @@ var config = {
   },
 
   output: {
-    path: path.join(__dirname, '/dist'),
+    path: path.join(__dirname, '/'),
     filename: '[name].bundle.js',
     publicPath: '/dist/',
     sourceMapFilename: '[name].map',
