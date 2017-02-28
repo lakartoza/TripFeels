@@ -1,6 +1,9 @@
 html {
-    color: #ffc957;
+
+
 }
+
+
 
 a {
   color: #ffc957;
@@ -29,17 +32,37 @@ a:active{
 
 
 
-h1, h2, h3{
+h1{
   color: #ffc957;
   display:flex;
   justify-content:center;
   align-items:center;
   text-align: center;
   color: #ffc957;
-
-
 }
 
+
+h2{
+  color: #929292;
+  font-size: 12px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align: center;
+  top: -16px;
+  position: relative;
+}
+
+
+h3{
+  color: #ffc957;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align: center;
+  color: #ffc957;
+  font-size: 15px;
+}
 h4{
     color: #ffc957;
     display: flex;
@@ -49,7 +72,6 @@ h4{
     padding: 138px;
     margin: 20px;
     font-size: 53px;
-
  }
 
 
@@ -64,7 +86,9 @@ input
     display: inline-block;
     width: 100%;
     height: 34px;
+    text-transform: uppercase;
 }
+
 
 
 ::-webkit-input-placeholder {
@@ -84,16 +108,19 @@ input
 }
 
 .button-login {
-  margin-top: 20px;
+  margin: 20px auto;
   background-color: #ffc957;
   color: white;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 4px;
   display: block;
   width: 73%;
+  height: 30px;
   font-style: bold;
+  border-style: none;
+
 }
 
 .page-header{
@@ -120,6 +147,7 @@ p {
   -ms-transform: rotate(30deg); /* IE 9 */  
   -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
   transform: rotate(30deg);
+  margin: 32px 24px;
 }
 
 .hexagon:before,
@@ -146,7 +174,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 155px;
 }
 
 #form {
@@ -158,9 +186,7 @@ p {
     position: absolute;
 
 }
-p #slogan {
-  margin: 20px;
-}
+
 
 .tiny-hex {
   position: relative;
@@ -192,5 +218,162 @@ p #slogan {
   top: 100%;
   width: 0;
   border-top: 57.74px solid #64C7CC;
+}
+
+.error {
+  color: #64C7CC;
+  width: 100%; 
+  height: 20px;
+ 
+}
+
+.form-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+
+}
+
+.slogan {
+  margin: auto;
+}
+
+.account-options {
+    display: flex;
+    font-size: 14px;
+    margin: auto;
+    justify-content: center;
+
+}
+
+#create {
+   color: #ffc957;
+   font-style: bold;
+}
+
+#login-acc {
+   color: #929292;
+}
+
+
+
+/*left column*/
+
+.mini-hexagon {
+  position: relative;
+  width: 120px; 
+  height: 69.28px;
+  background-color: #d6d6d6;
+  margin: 62.64px 0px;
+    -ms-transform: rotate(30deg); /* IE 9 */  
+  -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+  transform: rotate(30deg);
+
+}
+
+.mini-hexagon:before,
+.mini-hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+
+}
+
+.mini-hexagon:before {
+  bottom: 100%;
+  border-bottom: 34.64px solid #d6d6d6;
+}
+
+.mini-hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 34.64px solid #d6d6d6;
+}
+
+
+/*right column*/
+.r-mini-hexagon {
+    position: relative;
+    width: 120px;
+    height: 69.28px;
+    background-color: #d6d6d6;
+    margin: 62.64px 0;
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+    top: 65px;
+    right: 32px;
+
+}
+
+.r-mini-hexagon:before,
+.r-mini-hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+
+}
+
+.r-mini-hexagon:before {
+  bottom: 100%;
+  border-bottom: 34.64px solid #d6d6d6;
+}
+
+.r-mini-hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 34.64px solid #d6d6d6;
+}
+
+/*left column*/
+
+.l-mini-hexagon {
+    position: relative;
+    width: 120px;
+    height: 69.28px;
+    background-color: #d6d6d6;
+    margin: 62.64px 0;
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+    top: 65px;
+    left: 35px;
+
+}
+
+.l-mini-hexagon:before,
+.l-mini-hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+
+}
+
+.l-mini-hexagon:before {
+  bottom: 100%;
+  border-bottom: 34.64px solid #d6d6d6;
+}
+
+.l-mini-hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 34.64px solid #d6d6d6;
+}
+
+
+.left {
+  margin: auto;
+      display: flex;
+    justify-content: center;
+    align-items: center;  
+
 }
 
