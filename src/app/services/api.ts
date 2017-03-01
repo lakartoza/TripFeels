@@ -2,7 +2,6 @@ import { observableToBeFn } from 'rxjs/testing/TestScheduler';
 import { Injectable } from '@angular/core';
 import { Headers, Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { NoteService } from './notes';
 
 
 import 'rxjs/Rx';

@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "^2.0.0",
     "@angular/router": "^3.0.0",
     "@angularclass/api": "^1.2.0",
+    "angular2-modal": "^2.0.3",
     "concurrently": "^3.3.0",
     "core-js": "^2.4.1",
     "lodash": "^4.16.1",

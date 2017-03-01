@@ -1,0 +1,47 @@
+h1 {
+  margin: auto;
+  color: #ffc957;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.note-creator {
+  padding: 20px;
+  background-color: white;
+  border-radius: 3px;
+}
+.title {
+  font-weight: bold;
+  color: rgba(0,0,0,0.8);
+}
+.full {
+  height: 100px;
+}
+
+input
+{
+justify-content: center;
+align-items: center;
+text-align: center;
+margin: 10px 60px;
+color: #ffc957;
+border-style: none;
+display: inline-block;
+width: 50px;
+height: 34px;
+text-transform: uppercase;
+}
+
+.btn-light {
+  margin-top: 20px;
+  background-color: #ffc957;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: block;
+  font-style: bold;
+  border-style: none;
+}
