@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators,ReactiveFormsModule} from '@angular/forms';
 import { ValidationService } from './validation.service';
+import { NextTrip } from './next-trip.button';
+
 
 @Component({
     selector: 'trips-container',
@@ -16,8 +18,7 @@ import { ValidationService } from './validation.service';
 	      
 	    this.userForm = this.formBuilder.group({
 	      'name': ['', [Validators.required, Validators.minLength(1)]],
-	      'email': ['', [Validators.required, ValidationService.emailValidator]],
-	      'password': ['', [Validators.required, Validators.minLength(5), ValidationService.passwordValidator]]
+	     
 	    });
 	    
 	    console.log(this.userForm);
@@ -25,10 +26,14 @@ import { ValidationService } from './validation.service';
 	  
 	  saveUser() {
 	    if (this.userForm.dirty && this.userForm.valid) {
-	      alert(`Name: ${this.userForm.value.name} Email: ${this.userForm.value.email}`);
+	    	// save name = trip name goes onto app header only after 
+
+	    	
 	    }
 
 	  }
+
+
 
 
 }

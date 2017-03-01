@@ -11,6 +11,7 @@ import { ControlMessagesComponent } from './app/containers/control-messages.comp
 import { ValidationService } from './app/containers/validation.service';
 import { ModalModule } from 'angular2-modal';
 import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
+import { NextTrip } from './app/containers/next-trip.button';
 // import { AppModal }   from './app/ui/note-creator/modal.component';
 
 import { 
@@ -33,6 +34,7 @@ import {
     Login,
     Trips,
     ControlMessagesComponent,
+    NextTrip
     // AppModal
   ],
   providers: [ValidationService, NoteService, ApiService ],

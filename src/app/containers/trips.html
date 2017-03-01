@@ -9,8 +9,8 @@
 	                        <form [formGroup]="userForm" (submit)="saveUser()">
 	                          <input formControlName="name" id="name" placeholder="TRIP NAME"/>
 	                          <control-messages [control]="userForm.controls.name"></control-messages>
-
-				 			</form>
+							</form>
+				 			
 				 </div>
 				<p>
 			</div>
@@ -36,8 +36,13 @@
 		<div id = "instruct">
 	        Invite other users to collaborate on your trip planning. Once you begin your B-storm, your selected users will receive an email invite.
         </div>
-        <a [routerLink]="['', 'notes']">
-	        <input type="submit" class = "button-login" value = "START B-STORMING">
-        </a>
-    </div> 
+        	
+    	<form [formGroup]="userForm" (submit)="saveUser()">
+        	<a [routerLink]="['', 'notes']">	
+				<button [disabled]="!userForm.valid" type="submit" class = "button-login"> START B-STORMING
+				</button>
+			</a>
+	
+        </form>
+</div> 
     
