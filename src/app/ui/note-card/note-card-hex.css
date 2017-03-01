@@ -173,3 +173,8 @@ body {
 }
 
 
+.icon {
+  z-index: 100; 
+  position: absolute;
+  visibility: visible;
+}
