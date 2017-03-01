@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { NoteService } from '../../services';
+import { NoteService, ApiService } from '../../services/';
 
 @Component({
   selector: 'notes-container',
+  providers: [NoteService, ApiService],
   styleUrls: [`app/containers/notes/notes.css`],
   template: `
   <div class="notes">

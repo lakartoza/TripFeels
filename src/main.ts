@@ -5,6 +5,10 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 import { App, providers, routes } from './app'
 import { HttpModule } from '@angular/http'
 import { Main, Notes, AddTrip, Login, Trips } from './app/containers'
+import { NoteService, ApiService } from './app/services'
+import { ReactiveFormsModule } from '@angular/forms';
+import { ControlMessagesComponent } from './app/containers/control-messages.component';
+import { ValidationService } from './app/containers/validation.service';
 
 import { 
   AppBar,
@@ -24,10 +28,11 @@ import {
     ColorPicker,
     AddTrip,
     Login,
-    Trips
+    Trips,
+    ControlMessagesComponent,
   ],
-  providers,
-  imports: [HttpModule, BrowserModule, FormsModule, routes],
+  providers: [ValidationService, NoteService, ApiService ],
+  imports: [HttpModule, BrowserModule, FormsModule, routes,ReactiveFormsModule],
   bootstrap: [App]
 })
 export class AppModule {}
