@@ -5,6 +5,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 import { App, providers, routes } from './app'
 import { HttpModule } from '@angular/http'
 import { Main, Notes, AddTrip, Login, Trips } from './app/containers'
+import {enableProdMode} from '@angular/core';
 
 import { 
   AppBar,
@@ -32,4 +33,5 @@ import {
 })
 export class AppModule {}
 
+enableProdMode();
 platformBrowserDynamic().bootstrapModule(AppModule)
