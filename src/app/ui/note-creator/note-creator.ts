@@ -13,9 +13,9 @@ import {
 export class NoteCreator {
  
  @Output() createNote = new EventEmitter();
-  colors: Array<string> = ['#B19CD9', '#FF6961', '#77DD77', '#AEC6CF', '#F49AC2', 'white'];
+  colors: Array<string> = ['#B19CD9', '#FF6961', '#77DD77', '#AEC6CF'];
   
-  // Data of all images
+  //Data of all images
   // private hex1= {
   //   photo: '1.png'
   // };
@@ -56,7 +56,7 @@ export class NoteCreator {
     const { title, value, color } = this.newNote;
 
     if (title && value) {
-      // var colorChoice = []; 
+      var colorChoice = []; 
       // if (this.images[0] && this.colors[0]) {
 
       this.createNote.next({ title, value, color});

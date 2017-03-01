@@ -1,51 +1,34 @@
-import { Component } from '@angular/core'
+import { Component } from '@angular/core';
+import { FormGroup, FormBuilder, Validators,ReactiveFormsModule} from '@angular/forms';
+import { ValidationService } from './validation.service';
 
 @Component({
     selector: 'trips-container',
     styleUrls: [`app/containers/trips.component.css`],
-    template: `
+ 	templateUrl: 'app/containers/trips.html',
 
-    <div class = "container">
-        <h4> ADD NEW TRIP </h4> <p>
-        <div class="section group">
-			<div class="col span_1_of_2">
-				<div class = "tiny-hex" ></div> 
-			</div>
-			<div class="col span_1_of_2">
-			<input type="text" id="trip-name" name="trip-name" required placeholder="TRIP NAME"> <p>
-			</div>
-		</div>
-	    <h4> ADD FRIENDS </h4> <p>
-        <div class="section group">
-			<div class="col span_1_of_2">
-				<div class = "tiny-hex" >
-				 		<div class = "plus"  >
-							<i class="fa fa-plus-circle" aria-hidden="true"></i>
-						</div>
-				</div> 
-
-				
-			</div>
-			<div class="col span_1_of_2">
-				
-						<input  type="email" id="email" name="email" required placeholder=" ADD E-MAIL "> 
-			
-			</div>
-		</div>
-
-		<div id = "instruct">
-	        Invite other users to collaborate on your trip planning. Once you begin your B-storm, your selected users will receive an email invite.
-        </div>
-        <a [routerLink]="['', 'notes']">
-	        <input type="submit" class = "button-login" value = "START B-STORMING">
-        </a>
-    </div> 
-    
-    `
 }) export class Trips {
-	/* var emails:any = {};
 
-	constructor (){
-    	this.emails = ['First', 'Second', 'Third'];
-    } */ 
+
+	  userForm: any;
+	  
+	  constructor(private formBuilder: FormBuilder) {
+	      
+	    this.userForm = this.formBuilder.group({
+	      'name': ['', [Validators.required, Validators.minLength(1)]],
+	      'email': ['', [Validators.required, ValidationService.emailValidator]],
+	      'password': ['', [Validators.required, Validators.minLength(5), ValidationService.passwordValidator]]
+	    });
+	    
+	    console.log(this.userForm);
+	  }
+	  
+	  saveUser() {
+	    if (this.userForm.dirty && this.userForm.valid) {
+	      alert(`Name: ${this.userForm.value.name} Email: ${this.userForm.value.email}`);
+	    }
+
+	  }
+
+
 }

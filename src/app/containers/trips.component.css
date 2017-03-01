@@ -1,5 +1,6 @@
 html {
     color: #ffc957;
+
 }
 
 a {
@@ -67,6 +68,7 @@ input
     border-color: #c0c0c0;
     width: 100%;
     height: 34px;
+    text-transform: uppercase;
 }
 
 

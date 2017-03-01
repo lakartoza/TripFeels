@@ -16,7 +16,7 @@ import {
     min-width: 120px;
     padding: 10px;
     position: absolute;
-    bottom: -37px;
+    top: 74px;
     display: -webkit-box;
     }
 
