@@ -1,4 +1,15 @@
-* {
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter
+} from '@angular/core';
+
+@Component({
+  selector: 'note-card',
+  styles: [`
+  
+  * {
     margin: 0;
     padding: 0;
 }
@@ -171,5 +182,36 @@ body {
         font-size: 13px;
     }
 }
+`],
+  template: `
+    <div
+      [ngStyle]="{'background-color': note.color}"
+      (mouseenter)="toggleCheck()"
+      (mouseleave)="toggleCheck()"
+      >
+        <div class="icon" *ngIf="showCheck" (click)="onChecked()">
+            <i class="material-icons">check</i>
+        </div>
+        <div class="hexIn">
+          <a class="hexLink" href="#">
+            <img src="https://static.vecteezy.com/system/resources/previews/000/093/696/original/vector-yellow-abstract-background.jpg" alt="" />
+            <p class="value">{{ note.value }}</p>
+          </a>
+        </div>
+      </div>
+  `
+})
+export class NoteCard {
+  @Input() note = {};
+  @Output() checked = new EventEmitter();
 
+  showCheck: boolean = false;
 
+  toggleCheck() {
+    this.showCheck = !this.showCheck;
+  }
+
+  onChecked() {
+    this.checked.next(this.note);
+  }
+}
