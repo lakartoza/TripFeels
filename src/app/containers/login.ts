@@ -4,7 +4,7 @@ import { ValidationService } from './validation.service';
 
 @Component({
     selector: 'login-container',
-    styleUrls: [`app/containers/login.component.css`],
+    styleUrls: [`/src/app/containers/login.component.css`],
     templateUrl : 'app/containers/login.html'
 
 }) export class Login {

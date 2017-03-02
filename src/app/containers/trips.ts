@@ -2,7 +2,7 @@ import { Component } from '@angular/core'
 
 @Component({
     selector: 'trips-container',
-    styleUrls: [`app/containers/trips.component.css`],
+    styleUrls: [`/src/app/containers/trips.component.css`],
     template: `
 
     <div class = "container">

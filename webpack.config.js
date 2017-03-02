@@ -11,8 +11,9 @@ var config = {
   },
 
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, '/public'),
     filename: '[name].bundle.js',
+    publicPath: '/public/',
     sourceMapFilename: '[name].map',
     chunkFilename: '[id].chunk.js'
   },
@@ -27,6 +28,11 @@ var config = {
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({ name: ['polyfills', 'vendor', 'main'].reverse(), minChunks: Infinity }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
   ],
 
   resolve: {

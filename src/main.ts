@@ -12,6 +12,7 @@ import { ValidationService } from './app/containers/validation.service';
 import { ModalModule } from 'angular2-modal';
 import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
 // import { AppModal }   from './app/ui/note-creator/modal.component';
+import {enableProdMode} from '@angular/core';
 
 import { 
   AppBar,
@@ -52,4 +53,5 @@ import {
 })
 export class AppModule {}
 
+enableProdMode();
 platformBrowserDynamic().bootstrapModule(AppModule)
