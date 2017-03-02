@@ -23,14 +23,14 @@
 
                     <div class = "form-input">
                         <form [formGroup]="userForm" (submit)="saveUser()">
-                          <input formControlName="name" id="name" placeholder="NAME"/>
+                          <input formControlName="name" id="name" placeholder="NAME" required/>
                           <control-messages [control]="userForm.controls.name"></control-messages>
                     
-                          <input formControlName="email" id="email" placeholder="EMAIL" />
+                          <input formControlName="email" id="email" placeholder="EMAIL" required/>
                           <control-messages [control]="userForm.controls.email"></control-messages>
 
-                          <input formControlName="password" id="password" type="password" placeholder="PASSWORD" />
-                          <control-messages [control]="userForm.controls.password"></control-messages>
+                          <input formControlName="password" id="password" type="password" placeholder="PASSWORD" required />
+                          <control-messages [control]="userForm.controls.password" ></control-messages>
                           <a [routerLink]="['', 'addtrip']">
 <!--                           <button type="submit" class = "button-login" [disabled]="!userForm.valid">START B-STORM</button> -->
                           <button type="submit" class = "button-login"[disabled]="!userForm.valid" >START B-STORM</button>

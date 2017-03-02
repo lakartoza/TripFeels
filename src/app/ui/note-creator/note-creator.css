@@ -8,15 +8,28 @@ h1 {
 }
 
 .note-creator {
-    padding: 28px;
-    margin-bottom: 114px;
+  padding: 28px;
+  margin-bottom: 114px;
   background-color: white;
   border-radius: 3px;
+  border-style: solid;
+  border-color:  #ffc957;
+  
 }
 .title {
   font-weight: bold;
   color: rgba(0,0,0,0.8);
+  border-style: solid;
+  border-width: 1px; 
+  border-color: #ffc957; 
+  
 
+}
+
+.value {
+  border-style: solid;
+  border-width: 1px; 
+  border-color: #ffc957; 
 }
 .full {
   height: 100px;
@@ -34,6 +47,9 @@ display: inline-block;
 /* width: 41px; */
 height: 34px;
 text-transform: uppercase;
+  border-style: solid;
+  border-width: 1px; 
+  border-color: #ffc957; 
 }
 
 .btn-light {

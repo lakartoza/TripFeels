@@ -55,7 +55,7 @@ import {
   template: `
 
     <div class="color-selector">
-      <i (click)="showSelector(true)" class="material-icons icon">color_lens</i>
+      <i (click)="showSelector(true)" ></i>
       <div class="selector row center-xs" *ngIf="isSelectorVisible">
         <div
           class="color"
@@ -71,7 +71,7 @@ import {
 export class ColorPicker {
   @Input() colors: Array<string> = [];
   @Output() selected = new EventEmitter<string>();
-  isSelectorVisible: boolean = false;
+  isSelectorVisible: boolean = true;
 
 
   showSelector(value: boolean) {
