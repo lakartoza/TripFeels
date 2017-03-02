@@ -5,7 +5,7 @@ import { ValidationService } from './validation.service';
 @Component({
     selector: 'login-container',
     styles: [`
-    html {
+html {
 
 
 }
@@ -384,10 +384,18 @@ p {
 
 }
 
+.ng-valid[required] {
+      border-left: 5px none #42A948; /* green */
+    }  
+
+.ng-invalid {
+      border-left: 5px solid #ffc957; /* red */
+    }
+
 
     `],
     template : `
-        <div class = "container">
+         <div class = "container">
         <div class = "row">
             <div class = ".col-xs-6 .col-md-4">
                 <div class = "row">
@@ -412,17 +420,17 @@ p {
 
                     <div class = "form-input">
                         <form [formGroup]="userForm" (submit)="saveUser()">
-                          <input formControlName="name" id="name" placeholder="NAME"/>
+                          <input formControlName="name" id="name" placeholder="NAME" required/>
                           <control-messages [control]="userForm.controls.name"></control-messages>
                     
-                          <input formControlName="email" id="email" placeholder="EMAIL" />
+                          <input formControlName="email" id="email" placeholder="EMAIL" required/>
                           <control-messages [control]="userForm.controls.email"></control-messages>
 
-                          <input formControlName="password" id="password" type="password" placeholder="PASSWORD" />
-                          <control-messages [control]="userForm.controls.password"></control-messages>
-                          <a [routerLink]="['', 'AddTrip']">
+                          <input formControlName="password" id="password" type="password" placeholder="PASSWORD" required />
+                          <control-messages [control]="userForm.controls.password" ></control-messages>
+                          <a [routerLink]="['', 'addtrip']">
 <!--                           <button type="submit" class = "button-login" [disabled]="!userForm.valid">START B-STORM</button> -->
-                          <button type="submit" class = "button-login" >START B-STORM</button>
+                          <button type="submit" class = "button-login"[disabled]="!userForm.valid" >START B-STORM</button>
                           </a>
                           
                           <div class = "form-input"> Forgot password? </div>

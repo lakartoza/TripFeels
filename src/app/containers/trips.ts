@@ -1,10 +1,15 @@
-import { Component } from '@angular/core'
+import { Component } from '@angular/core';
+import { FormGroup, FormBuilder, Validators,ReactiveFormsModule} from '@angular/forms';
+import { ValidationService } from './validation.service';
+import { NextTrip } from './next-trip.button';
+
 
 @Component({
     selector: 'trips-container',
     styles: [`
-	html {
+html {
     color: #ffc957;
+
 }
 
 a {
@@ -72,6 +77,7 @@ input
     border-color: #c0c0c0;
     width: 100%;
     height: 34px;
+    text-transform: uppercase;
 }
 
 
@@ -100,17 +106,18 @@ input
 
 }
 .button-login {
-  margin-top: 20px;
-  background-color: #ffc957;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-radius: 5px;
-  display: block;
-  width: 50%;
-  font-style: bold;
-
+    margin-top: 20px;
+    background-color: #ffc957;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    display: block;
+    width: 50%;
+    font-style: bold;
+    border-style: none;
+    height: 29px;
 }
 
 .button-hex {
@@ -295,9 +302,8 @@ p #slogan {
 @media only screen and (max-width: 480px) {
 	.span_2_of_2, .span_1_of_2 { width: 100%; }
 }
-	`],
+    `,
     template: `
-
     <div class = "container">
         <h4> ADD NEW TRIP </h4> <p>
         <div class="section group">
@@ -305,7 +311,14 @@ p #slogan {
 				<div class = "tiny-hex" ></div> 
 			</div>
 			<div class="col span_1_of_2">
-			<input type="text" id="trip-name" name="trip-name" required placeholder="TRIP NAME"> <p>
+				 <div class = "form-input">
+	                        <form [formGroup]="userForm" (submit)="saveUser()">
+	                          <input formControlName="name" id="name" placeholder="TRIP NAME"/>
+	                          <control-messages [control]="userForm.controls.name"></control-messages>
+							</form>
+				 			
+				 </div>
+				<p>
 			</div>
 		</div>
 	    <h4> ADD FRIENDS </h4> <p>
@@ -329,16 +342,39 @@ p #slogan {
 		<div id = "instruct">
 	        Invite other users to collaborate on your trip planning. Once you begin your B-storm, your selected users will receive an email invite.
         </div>
-        <a [routerLink]="['', 'notes']">
-	        <input type="submit" class = "button-login" value = "START B-STORMING">
-        </a>
-    </div> 
+        	
+    	<form [formGroup]="userForm" (submit)="saveUser()">
+        	<a [routerLink]="['', 'notes']">	
+				<button [disabled]="!userForm.valid" type="submit" class = "button-login"> START B-STORMING
+				</button>
+			</a>
+	
+        </form>
+</div> 
     
     `
 }) export class Trips {
-	/* var emails:any = {};
 
-	constructor (){
-    	this.emails = ['First', 'Second', 'Third'];
-    } */ 
+
+	  userForm: any;
+	  
+	  constructor(private formBuilder: FormBuilder) {
+	      
+	    this.userForm = this.formBuilder.group({
+	      'name': ['', [Validators.required, Validators.minLength(1)]],
+	     
+	    });
+	    
+	    console.log(this.userForm);
+	  }
+	  
+	  saveUser() {
+	    if (this.userForm.dirty && this.userForm.valid) {
+	    	// save name = trip name goes onto app header only after 
+
+	    	
+	    }
+
+	  }
+
 }

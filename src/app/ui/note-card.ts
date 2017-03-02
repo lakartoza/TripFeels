@@ -182,9 +182,18 @@ body {
         font-size: 13px;
     }
 }
+
+.icon {
+  z-index: 100; 
+  position: absolute;
+  visibility: visible;
+}
+
+
+
 `],
   template: `
-    <div
+     <div
       [ngStyle]="{'background-color': note.color}"
       (mouseenter)="toggleCheck()"
       (mouseleave)="toggleCheck()"
@@ -195,7 +204,8 @@ body {
         <div class="hexIn">
           <a class="hexLink" href="#">
             <img src="https://static.vecteezy.com/system/resources/previews/000/093/696/original/vector-yellow-abstract-background.jpg" alt="" />
-            <p class="value">{{ note.value }}</p>
+            <div class="title">{{ note.title }}</div>
+            <div class="value">{{ note.value }}</div>
           </a>
         </div>
       </div>
