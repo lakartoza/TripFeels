@@ -302,7 +302,7 @@ p #slogan {
 @media only screen and (max-width: 480px) {
 	.span_2_of_2, .span_1_of_2 { width: 100%; }
 }
-    `,
+    `],
     template: `
     <div class = "container">
         <h4> ADD NEW TRIP </h4> <p>
