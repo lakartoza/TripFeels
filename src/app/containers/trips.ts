@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators,ReactiveFormsModule} from '@angular/forms';
 import { ValidationService } from './validation.service';
-import { NextTrip } from './next-trip.button';
 
 
 @Component({
