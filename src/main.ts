@@ -12,7 +12,7 @@ import { ValidationService } from './app/containers/validation.service';
 import { ModalModule } from 'angular2-modal';
 import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
 // import { AppModal }   from './app/ui/note-creator/modal.component';
-import {Router, NavigationEnd} from '@angular/router';
+import {  Router, NavigationEnd } from '@angular/router';
 declare let ga: Function;
 
 import { 
