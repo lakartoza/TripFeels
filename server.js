@@ -11,9 +11,9 @@ module.exports = {
 
     app.use('/public', publicPath);
     app.get('/', function (_, res) { res.sendFile(indexPath) });
-    app.all('/notes/', (req, res) => {
-      res.redirect('/notes');
-    });
+    // app.all('/notes/', (req, res) => {
+    //   res.redirect('/notes');
+    // });
     
     return app;
   }
