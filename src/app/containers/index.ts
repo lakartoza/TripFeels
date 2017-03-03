@@ -3,4 +3,3 @@ export { Notes } from './notes';
 export { AddTrip } from './addtrip';
 export { Trips } from './trips';
 export { Login } from './login';
-export { LoginB } from './loginB';
