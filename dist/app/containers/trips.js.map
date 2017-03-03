@@ -1,1 +1,0 @@
-{"version":3,"file":"trips.js","sourceRoot":"","sources":["../../../src/app/containers/trips.ts"],"names":[],"mappings":";;;;;;;AAAA,sCAAyC;AA4CtC,IAAa,KAAK;IAAlB;IAMH,CAAC;IAAD,YAAC;AAAD,CAAC,AANE,IAMF;AANe,KAAK;IA1CpB,gBAAS,CAAC;QACP,QAAQ,EAAE,iBAAiB;QAC3B,SAAS,EAAE,CAAC,oCAAoC,CAAC;QACjD,QAAQ,EAAE,uuCAsCT;KACJ,CAAC;GAAc,KAAK,CAMpB;AANe,sBAAK"}

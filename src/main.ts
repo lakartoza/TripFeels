@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 import { App, providers, routes } from './app'
 import { HttpModule } from '@angular/http'
-import { Main, Notes, AddTrip, Login, Trips } from './app/containers'
+import { Main, Notes, AddTrip, Login, LoginB, Trips } from './app/containers'
 import { NoteService, ApiService } from './app/services'
 import { ReactiveFormsModule } from '@angular/forms';
 import { ControlMessagesComponent } from './app/containers/control-messages.component';
@@ -33,6 +33,7 @@ import {
     ColorPicker,
     AddTrip,
     Login,
+    LoginB,
     Trips,
     ControlMessagesComponent,
     // AppModal
