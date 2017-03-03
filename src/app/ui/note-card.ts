@@ -1,15 +1,14 @@
-import {
-  Component,
-  Input,
-  Output,
-  EventEmitter
-} from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+
+
+
+
 
 @Component({
   selector: 'note-card',
   styles: [`
   
-  * {
+* {
     margin: 0;
     padding: 0;
 }
@@ -183,17 +182,16 @@ body {
     }
 }
 
+
 .icon {
   z-index: 100; 
   position: absolute;
   visibility: visible;
 }
 
-
-
 `],
   template: `
-     <div
+    <div
       [ngStyle]="{'background-color': note.color}"
       (mouseenter)="toggleCheck()"
       (mouseleave)="toggleCheck()"
@@ -225,3 +223,6 @@ export class NoteCard {
     this.checked.next(this.note);
   }
 }
+
+
+
