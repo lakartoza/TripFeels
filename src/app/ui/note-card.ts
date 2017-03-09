@@ -190,8 +190,16 @@ body {
 }
 
 .bs-hex-image {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 289px;
+  position: relative;
+}
+
+.bs-hex-text {
+    position: relative;
+    top: -201px;
+    left: 176px;
+    width: 100%;
 }
 `],
   template: `
@@ -204,11 +212,11 @@ body {
             <i class="material-icons">check</i>
         </div>
         <div class="">
-          <a class="" href="#">
-            <img class="bs-hex-image" src="/public/images/2.png" alt="" />
+          <div class="" href="#">
+            <img class="bs-hex-image" src="/public/images/1.png" alt="" />
             <div class="title">{{ note.title }}</div>
-            <div class="value">{{ note.value }}</div>
-          </a>
+            <h2 class="bs-hex-text value">{{ note.value }}</h2>
+          </div>
         </div>
       </div>
   `
