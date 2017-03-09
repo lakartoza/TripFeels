@@ -127,7 +127,62 @@ export class NoteCreator {
  
  @Output() createNote = new EventEmitter();
   colors: Array<string> = ['#B19CD9', '#FF6961', '#77DD77', '#AEC6CF'];
-  
+
+  newNote = {
+    title: '',
+    value: '',
+    color: 'white'
+  };
+
+  fullForm: boolean = false;
+
+  onCreateNote() {
+    const { title, value, color } = this.newNote;
+
+    if (value) {
+      var colorChoice = []; 
+      this.createNote.next({ title, value, color});
+    }
+
+    this.reset();
+    this.fullForm = false;
+  }
+
+  reset() {
+    this.newNote = {
+      title: '',
+      value: '',
+      color: 'white'
+    };
+  }
+
+  toggle(value: boolean) {
+    this.fullForm = value;
+  }
+
+  onColorSelect(color: string) {
+    if (color == '#B19CD9') {
+      this.newNote.title = "purple";
+    }
+    if (color == '#FF6961') {
+      this.newNote.title = "red";
+    }
+    if (color == '#77DD77') {
+      this.newNote.title = "green";
+    }
+    if (color == '#FFC957') {
+      this.newNote.title = "yellow";
+    }
+
+    this.newNote.color = 'white';
+    
+  }
+}
+
+
+
+
+
   //Data of all images
   // private hex1= {
   //   photo: '1.png'
@@ -154,45 +209,3 @@ export class NoteCreator {
   // private activity4 = this.hex4;
   // private activity5 = this.hex5;
   // private activity6 = this.hex6;
-
-
-
-  newNote = {
-    title: '',
-    value: '',
-    color: 'white'
-  };
-
-  fullForm: boolean = false;
-
-  onCreateNote() {
-    const { title, value, color } = this.newNote;
-
-    if (title && value) {
-      var colorChoice = []; 
-      // if (this.images[0] && this.colors[0]) {
-
-      this.createNote.next({ title, value, color});
-
-    }
-
-    this.reset();
-    this.fullForm = false;
-  }
-
-  reset() {
-    this.newNote = {
-      title: '',
-      value: '',
-      color: 'white'
-    };
-  }
-
-  toggle(value: boolean) {
-    this.fullForm = value;
-  }
-
-  onColorSelect(color: string) {
-    this.newNote.color = color;
-  }
-}

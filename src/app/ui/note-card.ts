@@ -198,7 +198,7 @@ body {
 .bs-hex-text {
     position: relative;
     top: -201px;
-    left: 176px;
+    left: 76px;
     width: 100%;
 }
 `],
@@ -213,8 +213,7 @@ body {
         </div>
         <div class="">
           <div class="" href="#">
-            <img class="bs-hex-image" src="/public/images/1.png" alt="" />
-            <div class="title">{{ note.title }}</div>
+            <img class="bs-hex-image" src="/public/images/{{ note.title }}.png" alt="" />
             <h2 class="bs-hex-text value">{{ note.value }}</h2>
           </div>
         </div>

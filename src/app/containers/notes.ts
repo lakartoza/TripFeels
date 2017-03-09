@@ -7,6 +7,7 @@ import { NoteService, ApiService } from '../services/';
   styles: [`
   .bs-note {
     display: inline-block;
+    text-align: center;
   }
   `],
   template: `
