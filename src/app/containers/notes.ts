@@ -4,22 +4,24 @@ import { NoteService, ApiService } from '../services/';
 @Component({
   selector: 'notes-container',
   providers: [NoteService, ApiService],
-  styles: [``],
+  styles: [`
+  .bs-note {
+    display: inline-block;
+  }
+  `],
   template: `
   <div class="notes">
     <div class="creator">
     <note-creator (createNote)="onCreateNote($event)"></note-creator>
     </div>
     <div class="notes">
-    <ul class="" id="hexGrid">
         <note-card
-            class="hex"
+            class="bs-note"
             [note]="note"
             *ngFor="let note of notes"
             (checked)="onNoteChecked($event)"
             >
         </note-card>
-    </ul>
     </div>
 </div>
   `

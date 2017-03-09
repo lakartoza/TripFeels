@@ -189,6 +189,10 @@ body {
   visibility: visible;
 }
 
+.bs-hex-image {
+  width: 400px;
+  height: 400px;
+}
 `],
   template: `
     <div
@@ -199,9 +203,9 @@ body {
         <div class="icon" *ngIf="showCheck" (click)="onChecked()">
             <i class="material-icons">check</i>
         </div>
-        <div class="hexIn">
-          <a class="hexLink" href="#">
-            <img src="https://static.vecteezy.com/system/resources/previews/000/093/696/original/vector-yellow-abstract-background.jpg" alt="" />
+        <div class="">
+          <a class="" href="#">
+            <img class="bs-hex-image" src="/public/images/2.png" alt="" />
             <div class="title">{{ note.title }}</div>
             <div class="value">{{ note.value }}</div>
           </a>
