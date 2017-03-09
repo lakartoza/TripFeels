@@ -198,13 +198,12 @@ body {
 .bs-hex-text {
     position: relative;
     top: -201px;
-    left: 76px;
     width: 100%;
 }
 `],
   template: `
     <div
-      [ngStyle]="{'background-color': note.color}"
+      [ngStyle]="{'background-color': 'white'}"
       (mouseenter)="toggleCheck()"
       (mouseleave)="toggleCheck()"
       >

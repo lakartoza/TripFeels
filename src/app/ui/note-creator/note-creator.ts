@@ -91,7 +91,7 @@ text-transform: uppercase;
                 name="newNoteTitle"
                 placeholder="NOTE TITLE"
                 class="col-xs-10 title"
-                *ngIf="fullForm"
+                *ngIf="0"
               >
               <input
                 type="text"
@@ -126,7 +126,7 @@ text-transform: uppercase;
 export class NoteCreator {
  
  @Output() createNote = new EventEmitter();
-  colors: Array<string> = ['#B19CD9', '#FF6961', '#77DD77', '#AEC6CF'];
+  colors: Array<string> = ['#B19CD9', '#FF6961', '#77DD77', '#FFC957'];
 
   newNote = {
     title: '',
@@ -150,7 +150,7 @@ export class NoteCreator {
 
   reset() {
     this.newNote = {
-      title: '',
+      title: 'purple',
       value: '',
       color: 'white'
     };
@@ -161,6 +161,7 @@ export class NoteCreator {
   }
 
   onColorSelect(color: string) {
+    console.log(color);
     if (color == '#B19CD9') {
       this.newNote.title = "purple";
     }
@@ -174,7 +175,7 @@ export class NoteCreator {
       this.newNote.title = "yellow";
     }
 
-    this.newNote.color = 'white';
+    this.newNote.color = color;
     
   }
 }
