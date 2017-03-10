@@ -125,18 +125,20 @@ input
 }
 
 .button-login {
-  margin: 20px auto;
-  background-color: #ffc957;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-radius: 4px;
-  display: block;
-  width: 73%;
-  height: 30px;
-  font-style: bold;
-  border-style: none;
+ 
+    margin: 7px 8px 16px;
+    background-color: #ffc957;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 4px;
+    /* display: block; */
+    width: 44%;
+    height: 30px;
+    font-style: bold;
+    border-style: none;
+    padding: 5px;
 
 }
 
@@ -191,7 +193,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 155px;
 }
 
 #form {
@@ -274,40 +276,6 @@ p {
    color: #929292;
 }
 
-/*Yello hexagons*/
-.y-mini-hexagon {
-  position: relative;
-  width: 120px; 
-  height: 69.28px;
-  background-color: #ffc957;
-  margin: 62.64px 0px;
-    -ms-transform: rotate(30deg); /* IE 9 */  
-  -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
-  transform: rotate(30deg);
-  top: 67px;
-
-}
-
-.y-mini-hexagon:before,
-.y-mini-hexagon:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-
-}
-
-.y-mini-hexagon:before {
-  bottom: 100%;
-  border-bottom: 34.64px solid #ffc957;
-}
-
-.y-mini-hexagon:after {
-  top: 100%;
-  width: 0;
-  border-top: 34.64px solid #ffc957;
-}
 
 
 /*left column*/
@@ -357,7 +325,7 @@ p {
     -webkit-transform: rotate(30deg);
     transform: rotate(30deg);
     top: 65px;
-    right: 2px;
+    right: 32px;
 
 }
 
@@ -394,7 +362,7 @@ p {
     -webkit-transform: rotate(30deg);
     transform: rotate(30deg);
     top: 65px;
-    left: 3px;
+    left: 35px;
 
 }
 
@@ -428,102 +396,100 @@ p {
 
 }
 
-#login {
-z-index: 0;
-position: absolute;
-    left: 45px;
-    bottom: 22px;
+.ng-valid[required] {
+      border-left: 5px none #42A948; /* green */
+    }  
 
-    color: white;
-    width: 100%;
-
-letter-spacing: 2px;
-text-transform: upper;
-
+.ng-invalid {
+      border-left: 5px solid #ffc957; /* red */
+    }
+.buttons {
+  display: inline-block;
 }
 
-#signup {
-z-index: 0;
-    position: absolute;
-    left: 45px;
-    bottom: 22px;
-
-    color: white;
-    width: 100%;
-    letter-spacing: 2px;
-
-}
   </style>
 
 
   <body>
-
-
-    <h1> TRIP B-STORM </h1>
-
-    <div class = "container">
+         <div class = "container">
         <div class = "row">
-            <div class = ".col-xs-2 .col-md-4">
-               <div class="l-mini-hexagon"></div>
+            <div class = ".col-xs-6 .col-md-4">
+                <div class = "row">
+                    <div class="col-md-6">
+                        <div class="l-mini-hexagon"></div>
+                    </div>
+                  <div class="col-md-6">
+                        <div class="mini-hexagon"></div>
+                        <div class="mini-hexagon"></div>
+                  </div>                
+                </div>
+            </div>
+            <div class = "left .col-xs-6 .col-md-4">
+                <div id = "section-title">
+                    <h1> <b>B-STORM </b></h1>
+                    <h2> A Brainstorming Application for Planning Trips </h2>
+                    <div class = "account-options">
 
-            </div>
-            <div class = ".col-xs-2 .col-md-4">
-               <div class="mini-hexagon"></div>
-               <div class="mini-hexagon"></div>
-            </div>
-            <div class = ".col-xs-2 .col-md-4">
-       
-               <div class="y-mini-hexagon"></div>
-               <div class="row">
-                  <div class="col col-md-8">
-                     <a [routerLink]="['', 'trips']">
-                     <div id = "login">LOGIN</div>
-                     </a>
-                  </div>
-                
-               </div>
-            </div>
-            <div class = ".col-xs-2 .col-md-4">
-               <div class="mini-hexagon"></div>
-               <div class="mini-hexagon"></div>
-            </div>
-            <div class = ".col-xs-2 .col-md-4">
-              
-               <div class="y-mini-hexagon"></div>
-            
+                    <!--                 <div id ="create">Create An Account &nbsp;  </div>  | <div id = "login-acc"> &nbsp;  Log In</div> <p> -->
+                    </div>
+                    
 
-                <div class="row">
-                  <div class="col col-md-8">
-                       <a [routerLink]="['', 'trips']">
-                            <div id = "signup">SIGN UP</div>
-                       </a>
-                  </div>
-                
-               </div>
+                    <div class = "form-input">
+                        <form [formGroup]="userForm" (submit)="saveUser()">
+                          <input formControlName="name" id="name" placeholder="NAME" required/>
+                          <control-messages [control]="userForm.controls.name"></control-messages>
+                    
+                          <input formControlName="email" id="email" placeholder="EMAIL" required/>
+                          <control-messages [control]="userForm.controls.email"></control-messages>
+
+                          <input formControlName="password" id="password" type="password" placeholder="PASSWORD" required />
+                          <control-messages [control]="userForm.controls.password" ></control-messages>
+                          <div class = "butons">
+                            <button type="button" id="#buttonLogin" class = "button-login" >LEARN MORE</button>
+                            <div id = "login_Box_Div"> 
+                                Hey
+                            </div>
+                            <a [routerLink]="['', 'addtrip']">
+                            <button type="submit" class = "button-login"[disabled]="!userForm.valid" >START B-STORM</button>
+                            </a>
+                            
+                          </div>
+                          <div class = "form-input"> Forgot password? </div>
+                          
+                        </form>    
+                    </div>
+
+                </div>
+                <div class="hexagon"></div>
             </div>
             <!-- End of Middle Column -->
 
-            <div class = ".col-xs-2 .col-md-4">
-               <div class="mini-hexagon"></div>
-               <div class="mini-hexagon"></div>
+            <div class = ".col-xs-6 .col-md-4">
+                <div class = "row">
+                    <div class="col-md-6">
+                        <div class="mini-hexagon"></div>
+                        <div class="mini-hexagon"></div>
+                    </div>       
+                    <div class="col-md-6">
+                        <div class="r-mini-hexagon"></div>
+                    </div>
+                           
+                </div>
             </div>
-            <div class = ".col-xs-2.col-md-4">
-               <div class="r-mini-hexagon"></div>
- 
-            </div>
-            <div class = ".col-xs-2 .col-md-4">
-
-            </div>
-                
             <!-- End of left mini hexs -->
         </div>
         
    <!--  <div class="hexagon"></div> -->
 
     </div> 
-
+    <script>
+      $('#buttonLogin').click(function(){
+         $('#login_Box_Div').toggle();
+      });
+    </script>
     
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/utils/Draggable.min.js"></script>    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
