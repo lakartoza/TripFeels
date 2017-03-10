@@ -134,7 +134,7 @@ input
     text-align: center;
     border-radius: 4px;
     /* display: block; */
-    width: 44%;
+    width: 100%;
     height: 30px;
     font-style: bold;
     border-style: none;
@@ -404,13 +404,20 @@ p {
       border-left: 5px solid #ffc957; /* red */
     }
 .buttons {
-  display: inline-block;
-}
-#login_Box_Div{
-  background:#999;
-  display:none;
+    width: 50%; 
+     margin: auto;
+    justify-content: center;
+    align-items: center; 
 }
 
+.target {
+    margin: auto;
+      display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: #929292; 
+    padding-bottom: 10px;
+}
   </style>
 
 
@@ -448,17 +455,22 @@ p {
 
                           <input formControlName="password" id="password" type="password" placeholder="PASSWORD" required />
                           <control-messages [control]="userForm.controls.password" ></control-messages>
-                          <div class = "butons">
-                            <button type="button" id="#buttonLogin" class = "button-login" >LEARN MORE</button>
+                          <div class = "buttons">
+<!--                             <button type="button" id="#buttonLogin" class = "button-login" >LEARN MORE</button>
                             <div id = "login_Box_Div"> 
                                 Hey
-                            </div>
+                            </div> -->
+
+ 
                             <a [routerLink]="['', 'addtrip']">
                             <button type="submit" class = "button-login"[disabled]="!userForm.valid" >START B-STORM</button>
                             </a>
-                            
+                             <button id="toggle" class = "button-login" >LEARN MORE</button>
+                             <div class="target" style="display:none;">
+                                Sign In > Add Trip > Start Brainstorming!
+                             </div>
                           </div>
-                          <div class = "form-input"> Forgot password? </div>
+                     <!--      <div class = "form-input"> Forgot password? </div> -->
                           
                         </form>    
                     </div>
@@ -489,9 +501,14 @@ p {
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script>
-      $('#buttonLogin').click(function(){
-         $('#login_Box_Div').toggle();
-      });
+$("#toggle").click(function(){
+    var $target = $('.target'),
+        $toggle = $(this);
+
+    $target.slideToggle( 500, function () {
+        $toggle.text(($target.is(':visible') ? 'HIDE' : 'SHOW') + ' INFO');
+    });
+});
     </script>
     
 

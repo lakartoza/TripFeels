@@ -433,7 +433,7 @@ p {
                           <button type="submit" class = "button-login"[disabled]="!userForm.valid" >START B-STORM</button>
                           </a>
                           
-                          <div class = "form-input"> Forgot password? </div>
+                         
                           
                         </form>    
                     </div>
