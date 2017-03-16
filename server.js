@@ -15,6 +15,12 @@ module.exports = {
     const indexPathB = path.join(__dirname, '/public/loginb.html');
     const publicPath = express.static(path.join(__dirname, '/public'));
     
+
+    app.use('/public', publicPath);
+    app.get('/', function (_, res) { res.sendFile(indexPath) });
+    app.get('/login_A', function (_, res) { res.sendFile(indexPath) });    
+    app.get('/login_B', function (_, res) { res.sendFile(indexPathB) });
+    
     //Mongodb
     app.use(bodyParser.json());
     var db;
@@ -29,11 +35,8 @@ module.exports = {
       db = database;
       console.log("Database connection ready");
 
-    app.use('/public', publicPath);
-    app.get('/', function (_, res) { res.sendFile(indexPath) });
-    app.get('/login_A', function (_, res) { res.sendFile(indexPath) });    
-    app.get('/login_B', function (_, res) { res.sendFile(indexPathB) });
-    
+    });
+
     // CONTACTS API ROUTES BELOW
 
     // Generic error handler used by all endpoints.
@@ -67,12 +70,6 @@ module.exports = {
 
     app.delete("/api/contacts/:id", function(req, res) {
     });
-
-
-
-
-
-
 
     return app;
   }
