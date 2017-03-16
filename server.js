@@ -60,7 +60,7 @@ module.exports = {
           res.status(200).json(docs);
         }
       });
-  });
+
 
     app.post("/api/contacts", function(req, res) {
       var newContact = req.body;
@@ -92,7 +92,7 @@ module.exports = {
 
     app.delete("/api/contacts/:id", function(req, res) {
     });
-
+  });
     return app;
   }
 }
