@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
       <app-bar></app-bar>
       <main class="main">
         <router-outlet></router-outlet>
+        <div class="container">
+          <contact-list></contact-list>
+        </div>
       </main>
     </div>
   `
