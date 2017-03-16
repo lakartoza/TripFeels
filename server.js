@@ -1,5 +1,7 @@
 const express = require('express')
 const path = require('path')
+const mongodb_uri = "mongodb://heroku_k9s39t5d:bojk81j26f6esq82no9vua0lsv@ds131890.mlab.com:31890/heroku_k9s39t5d"
+
 
 //mongodb
 var bodyParser = require("body-parser");
@@ -25,7 +27,7 @@ module.exports = {
     app.use(bodyParser.json());
     var db;
 
-    mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, database) {
+    mongodb.MongoClient.connect(mongodb_uri, function (err, database) {
       if (err) {
         console.log(err);
         process.exit(1);
