@@ -219,7 +219,7 @@ body {
 
     .bs-hex-text {
         position: relative;
-        top: -175px;
+        top: -156px;
         margin: auto;
         text-align: left;
         color: white;
@@ -228,6 +228,9 @@ body {
         padding-left: 20px;
         text-transform: uppercase;
     }
+     .hex {
+       width: 26%; 
+     }
 
 }
 
