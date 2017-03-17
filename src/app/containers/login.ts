@@ -424,7 +424,7 @@ p {
     #section-title {
       z-index: 2;
       position: absolute;
-      margin-left:35px;
+      margin-left: 50px;
       justify-content: center;
       align-items: center;
       text-align: center;
