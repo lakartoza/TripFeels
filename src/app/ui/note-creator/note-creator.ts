@@ -76,7 +76,94 @@ text-transform: uppercase;
   margin: auto;
   width: 30%;
 
-}`],
+}
+
+
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+    h1 {
+      margin: auto;
+      color: #ffc957;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+    }
+
+    .note-creator {
+      padding: 28px;
+      margin-bottom: 114px;
+      background-color: white;
+      border-radius: 3px;
+      border-style: solid;
+      border-color:  #ffc957;
+      
+    }
+    .title {
+      font-weight: bold;
+      color: rgba(0,0,0,0.8);
+      border-style: solid;
+      border-width: 1px; 
+      border-color: #ffc957; 
+      
+
+    }
+
+    .value {
+      border-style: solid;
+      border-width: 1px; 
+      border-color: #ffc957; 
+    }
+    .full {
+      height: 100px;
+    }
+
+    input
+    {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 12px 60px 3px 28px;
+    color: #ffc957;
+    border-style: none;
+    display: inline-block;
+    /* width: 41px; */
+    height: 34px;
+    text-transform: uppercase;
+      border-style: solid;
+      border-width: 1px; 
+      border-color: #ffc957; 
+    }
+
+    .btn-light {
+       margin-top: 12px;
+      padding: 7px;
+      background-color: #ffc957;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      display: block;
+      border-style: none;
+    }
+
+    .creator {
+      margin-top: 57px;
+      width: 94%;
+
+    }
+
+}
+
+
+`],
   template : `
   
     <div class ="creator .col-xs-12">
@@ -98,7 +185,7 @@ text-transform: uppercase;
                 (focus)="toggle(true)"
                 [(ngModel)]="newNote.value"
                 name="newNoteValue"
-                placeholder=" PICK YOUR ACTIVITY NAME + COLOR"
+                placeholder="  CHOOSE TITLE + COLOR "
                 class="col-xs-10"
               >
               <div class="actions col-xs-12 row between-xs" *ngIf="fullForm">
