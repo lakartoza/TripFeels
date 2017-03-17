@@ -118,16 +118,13 @@ text-transform: uppercase;
               </div>
             </form>
           </div>
-
-
 `
- 
 })
 export class NoteCreator {
  
  @Output() createNote = new EventEmitter();
-  colors: Array<string> = ['#B19CD9', '#FF6961', '#77DD77', '#FFC957'];
-  // icons: Array<string> = ['', '#FF6961', '#77DD77', '#FFC957'];
+
+  colors: Array<string> = ['Location', 'Lodging', 'Activity', 'Transport'];
 
   newNote = {
     title: '',
@@ -163,51 +160,21 @@ export class NoteCreator {
 
   onColorSelect(color: string) {
     console.log(color);
-    if (color == '#B19CD9') {
+    if (color == 'Location') {
       this.newNote.title = "purple";
+      this.newNote.color = '#B19CD9';
     }
-    if (color == '#FF6961') {
+    if (color == 'Lodging') {
       this.newNote.title = "red";
+      this.newNote.color = '#FF6961';      
     }
-    if (color == '#77DD77') {
+    if (color == 'Activity') {
       this.newNote.title = "green";
+      this.newNote.color = '#77DD77';      
     }
-    if (color == '#FFC957') {
+    if (color == 'Transport') {
       this.newNote.title = "yellow";
-    }
-
-    this.newNote.color = color;
-    
+      this.newNote.color = '#FFC957';      
+    }    
   }
 }
-
-
-
-
-
-  //Data of all images
-  // private hex1= {
-  //   photo: '1.png'
-  // };
-  // private hex2 = {
-  //   photo: '2.png'
-  // };
-  // private hex3= {
-  //   photo: '3.png'
-  // };
-  // private hex4 = {
-  //   photo: '4.png'
-  // };
-  // private hex5= {
-  //   photo: '5.png'
-  // };
-  // private hex6 = {
-  //   photo: '.png'
-  // };
-
-  // private activity1 = this.hex1;
-  // private activity2 = this.hex2;
-  // private activity3 = this.hex3;
-  // private activity4 = this.hex4;
-  // private activity5 = this.hex5;
-  // private activity6 = this.hex6;

@@ -1,3 +1,4 @@
+import { RouterLink } from '@angular/router';
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators,ReactiveFormsModule} from '@angular/forms';
 import { ValidationService } from './validation.service';
@@ -675,6 +676,7 @@ p {
    <!--  <div class="hexagon"></div> -->
 
     </div> 
+
   `
 
 }) export class Login {

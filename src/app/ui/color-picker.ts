@@ -27,6 +27,7 @@ import {
       cursor: pointer;
       margin-right: 10px;
       margin-bottom: 10px;
+      display: inherit;
     }
     .color:hover {
       border: 2px solid darkgrey;
@@ -57,13 +58,13 @@ import {
     <div class="color-selector">
       <i (click)="showSelector(true)" ></i>
       <div class="selector row center-xs" *ngIf="isSelectorVisible">
-        <div
+        <img
+          src="public/images/{{color}}.png" 
           class="color"
           *ngFor="let color of colors"
-          [ngStyle]="{'background-color': color}"
+          [ngStyle]="{'background-image': color}"
           (click)="selectColor(color)"
         >
-
       </div>
     </div>
   `

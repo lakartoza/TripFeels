@@ -5,13 +5,14 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 import { App, providers, routes } from './app'
 import { HttpModule } from '@angular/http'
 import { Main, Notes, AddTrip, Login, Trips } from './app/containers'
-import { NoteService, ApiService } from './app/services'
+// import { NoteService, ApiService } from './app/services'
 import { ReactiveFormsModule } from '@angular/forms';
 import { ControlMessagesComponent } from './app/containers/control-messages.component';
 import { ValidationService } from './app/containers/validation.service';
 import { ModalModule } from 'angular2-modal';
 import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
-// import { AppModal }   from './app/ui/note-creator/modal.component';
+// import { ContactListComponent } from './app/contacts/';
+// import { ContactDetailsComponent } from './app/contacts';
 
 import { 
   AppBar,
@@ -34,17 +35,15 @@ import {
     Login,
     Trips,
     ControlMessagesComponent,
-
-    // AppModal
   ],
-  providers: [ValidationService, NoteService, ApiService ],
+  providers: [ValidationService],// NoteService, ApiService ],
   imports: [
      HttpModule, 
      BrowserModule, 
      FormsModule, 
      routes, 
      ReactiveFormsModule,     
-     BrowserModule, 
+     BrowserModule
      // ModalModule.forRoot(),
      // BootstrapModalModule 
    ],
