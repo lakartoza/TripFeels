@@ -1,4 +1,4 @@
-import { Contact } from './contacts/contact'
+import { Note } from './contacts/contact'
 // import {ContactListComponent} from './contacts/'
 import { RouterModule } from '@angular/router'
 import { ModuleWithProviders } from '@angular/core'

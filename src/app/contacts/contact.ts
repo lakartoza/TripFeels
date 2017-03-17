@@ -1,4 +1,4 @@
-export class Contact {
+export class Note {
   _id?: string;
   value: string;
   title: string;

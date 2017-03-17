@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NoteService, ApiService, ContactService } from '../services/';
-import { Contact } from '../contacts';
+// import { NoteService, ApiService, ContactService } from '../services/';
+import { ContactService } from '../services/';
+import { Note } from '../contacts';
 
 @Component({
   selector: 'notes-container',
@@ -30,8 +31,8 @@ import { Contact } from '../contacts';
 })
 
 export class Notes implements OnInit {
-  notes = [];
-  contacts: Contact[]
+  notes: Note[];
+  // contacts: Contact[];
 
   constructor(private noteService: ContactService) { }
   //   this.noteService.getNotes()
@@ -41,37 +42,38 @@ export class Notes implements OnInit {
   ngOnInit() {
       this.noteService
         .getNotes()
-        .then((contacts: Contact[]) => {
-          this.contacts = contacts.map((contact) => {
-            // if (!contact.phone) {
-            //   contact.phone = {
+        .then((notes: Note[]) => {
+          this.notes = notes.map((note) => {
+            // if (!note.phone) {
+            //   note.phone = {
             //     mobile: '',
             //     work: ''
             //   }
             // }
-            return contact;
+            return note;
           });
         });
     }
 
-    onCreateNote = (contact: Contact) => {
-      this.contacts.push(contact);
-      return this.contacts;
+    private getIndexOfContact = (contactId: String) => {
+      return this.notes.findIndex((contact) => {
+        return contact._id === contactId;
+      });
     }
 
+    onCreateNote = (note: Note) => {
+      this.noteService
+        .createNote(note)
+        .then(note => this.notes.push(note))
+    }
+     
 
-
-  // onCreateNote(note) {
-  //   this.noteService.createNote(note)
-  //   .subscribe(note => this.notes.push(note));
-  // }
-
-  // onNoteChecked(note) {
-  //     this.noteService.completeNote(note)
-  //     .subscribe(note => {
-  //       const i = this.notes.findIndex(localNote => localNote.id 
-  //       === note.id);
-  //       this.notes.splice(i, 1);
-  //     })
-  //   }  
+    onNoteChecked(note: Note) {
+      this.noteService
+      .deleteNote(note._id)     
+      .then(noteID => {
+        const i = this.notes.findIndex(localNote => localNote._id === noteID);
+        this.notes.splice(i, 1);
+      })
+      }  
 }

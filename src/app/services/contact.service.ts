@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Contact } from '../contacts/contact';
+import { Note } from '../contacts/contact';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
@@ -10,25 +10,25 @@ export class ContactService {
     constructor (private http: Http) {}
 
     // get("/api/contacts")
-    getNotes(): Promise<Contact[]> {
+    getNotes(): Promise<Note[]> {
       return this.http.get(this.contactsUrl)
                  .toPromise()
-                 .then(response => response.json() as Contact[])
+                 .then(response => response.json() as Note[])
                  .catch(this.handleError);
     }
 
     // post("/api/contacts")
-    createNote(newContact: Contact): Promise<Contact> {
-      return this.http.post(this.contactsUrl, newContact)
+    createNote(newNote: Note): Promise<Note> {
+      return this.http.post(this.contactsUrl, newNote)
                  .toPromise()
-                 .then(response => response.json() as Contact)
+                 .then(response => response.json() as Note)
                  .catch(this.handleError);
     }
 
     // get("/api/contacts/:id") endpoint not used by Angular app
 
     // delete("/api/contacts/:id")
-    deleteContact(delContactId: String): Promise<String> {
+    deleteNote(delContactId: String): Promise<String> {
       return this.http.delete(this.contactsUrl + '/' + delContactId)
                  .toPromise()
                  .then(response => response.json() as String)
@@ -36,11 +36,11 @@ export class ContactService {
     }
 
     // put("/api/contacts/:id")
-    updateContact(putContact: Contact): Promise<Contact> {
+    updateContact(putContact: Note): Promise<Note> {
       var putUrl = this.contactsUrl + '/' + putContact._id;
       return this.http.put(putUrl, putContact)
                  .toPromise()
-                 .then(response => response.json() as Contact)
+                 .then(response => response.json() as Note)
                  .catch(this.handleError);
     }
 
