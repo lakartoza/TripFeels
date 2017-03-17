@@ -52,24 +52,9 @@ export class Notes implements OnInit {
   // contacts: Contact[];
 
   constructor(private noteService: ContactService) { }
-  //   this.noteService.getNotes()
-  //   .subscribe(resp => this.notes = resp.data)
-  // }
 
   ngOnInit() {
-      this.noteService
-        .getNotes()
-        .then((notes: Note[]) => {
-          this.notes = notes.map((note) => {
-            // if (!note.phone) {
-            //   note.phone = {
-            //     mobile: '',
-            //     work: ''
-            //   }
-            // }
-            return note;
-          });
-        });
+      this.loopNotes();
     }
 
     private getIndexOfContact = (contactId: String) => {
@@ -93,5 +78,20 @@ export class Notes implements OnInit {
         this.notes.splice(i, 1);
       })
 
-      }  
+    }
+
+    loopNotes() { 
+      setInterval( () => {
+        this.noteService
+          .getNotes()
+          .then((notes: Note[]) => {
+            this.notes = notes;
+            console.log('Got notes!');
+          })
+     }, 3000);
+    };
+
+    
+
 }
+
