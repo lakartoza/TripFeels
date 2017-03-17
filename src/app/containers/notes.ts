@@ -18,10 +18,12 @@ import { Note } from '../contacts';
     and (min-device-width: 375px) 
     and (max-device-width: 667px) 
     and (-webkit-min-device-pixel-ratio: 2) { 
+      .bs-note {
     display: inline-block;
     text-align: center;
     width: 52%;
     padding-left: 12px;
+    }
   }
 
   `],
