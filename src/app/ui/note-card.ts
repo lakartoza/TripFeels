@@ -320,7 +320,7 @@ body {
     .bs-hex-image {
       width: 249px;
       position: relative;
-      padding-left: 14px;
+      padding-left: 29px;
     }
 
     .bs-hex-text {
@@ -412,7 +412,7 @@ body {
        
             <div class="hex " href="#">
               <img class="bs-hex-image" src="/public/images/{{ note.title }}.png" alt="" />
-              <div class ="text-box">
+          
 
                 <h2 class="bs-hex-text value">{{ note.value }}</h2>
                 <div class = "bs-hex-text">
@@ -431,7 +431,7 @@ body {
                   </div>
                 </div>
 
-              </div>
+              
             </div>
          
        </div>

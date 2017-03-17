@@ -9,7 +9,7 @@ import { Note } from '../contacts';
   .bs-note {
     display: inline-block;
     text-align: center;
-    width: 16%;
+    width: 249px ;
     padding-left: 12px;
   }
 
