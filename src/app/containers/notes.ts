@@ -88,7 +88,7 @@ export class Notes implements OnInit {
             this.notes = notes;
             console.log('Got notes!');
           })
-     }, 3000);
+     }, 10000);
     };
 
     
