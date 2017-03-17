@@ -452,40 +452,36 @@ export class NoteCard {
 
   toggleCheck() {
     this.showCheck = !this.showCheck;
-  }
+  };
 
   onChecked() {
     this.checked.next(this.note);
-  }
+  };
 
  
   upVote() {
-      if (this.myVote == +1) {
+      if (this.myVote == 1) {
         this.myVote++;
           return;
-      }
+      };
 
       this.myVote++;
       this.emitEvent();
-  }
+  };
 
   downVote() {
-      if (this.myVote => 0) {
+      if (this.myVote == 0) {
           this.myVote--;
           return;
-      }
+      };
 
       this.myVote--;
       this.emitEvent();
-  }
+  };
 
   emitEvent() {
       this.change.emit({myVote: this.myVote});
-  }
-
-
-
-
+  };
 
 }
 
