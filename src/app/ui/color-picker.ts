@@ -63,7 +63,7 @@ import {
           [ngStyle]="{'background-color': color}"
           (click)="selectColor(color)"
         >
-        </div>
+
       </div>
     </div>
   `

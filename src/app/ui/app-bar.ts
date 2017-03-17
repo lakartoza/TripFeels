@@ -14,6 +14,7 @@ import { Location } from '@angular/common';
       align-items:center;
       text-align: center;
       color: #ffc957;
+      font-weight: bold;
 
 
     }
@@ -52,7 +53,23 @@ import { Location } from '@angular/common';
     .row, .middle-xs, .between-xs{
       padding: 0px;
     }
-    
+
+
+    /* Portrait and Landscape */
+    @media only screen 
+      and (min-device-width: 375px) 
+      and (max-device-width: 667px) 
+      and (-webkit-min-device-pixel-ratio: 2) { 
+       #help {
+          margin: 20px;
+        }
+
+        #home {
+          margin: 20px;
+        }
+       
+    }
+
 
 
   `],
