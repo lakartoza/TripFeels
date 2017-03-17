@@ -394,7 +394,7 @@ p #slogan {
         width: 50%;
         font-style: bold;
         border-style: none;
-        height: 29px;
+        height: 34px;
     }
 
     .button-hex {
