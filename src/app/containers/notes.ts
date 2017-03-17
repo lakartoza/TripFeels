@@ -12,6 +12,18 @@ import { Note } from '../contacts';
     width: 16%;
     padding-left: 12px;
   }
+
+  /* Portrait and Landscape */
+  @media only screen 
+    and (min-device-width: 375px) 
+    and (max-device-width: 667px) 
+    and (-webkit-min-device-pixel-ratio: 2) { 
+    display: inline-block;
+    text-align: center;
+    width: 52%;
+    padding-left: 12px;
+  }
+
   `],
   template: `
   <div class="notes">
