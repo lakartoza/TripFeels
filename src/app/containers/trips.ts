@@ -391,10 +391,10 @@ p #slogan {
         text-align: center;
         border-radius: 5px;
         display: block;
-        width: 50%;
+        width: 60%;
         font-style: bold;
         border-style: none;
-        height: 34px;
+        height: 40px;
     }
 
     .button-hex {
