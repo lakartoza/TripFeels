@@ -82,19 +82,7 @@ h4{
  }
 
 
-input
-{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 5px;
-    color: #ffc957;
-    border-style: none;
-    display: inline-block;
-    width: 100%;
-    height: 34px;
-    text-transform: uppercase;
-}
+
 
 
 
@@ -114,6 +102,8 @@ input
     color: #ffc957;  
 }
 
+
+
 .button-login {
   margin: 20px auto;
   background-color: #ffc957;
@@ -128,6 +118,20 @@ input
   font-style: bold;
   border-style: none;
 
+}
+
+input
+{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+    color: #ffc957;
+    border-style: none;
+    display: inline-block;
+    width: 100%;
+    height: 34px;
+    text-transform: uppercase;
 }
 
 .page-header{
@@ -266,7 +270,7 @@ p {
 
 
 
-/*left column*/
+/*Mini column*/
 
 .mini-hexagon {
   position: relative;
@@ -349,7 +353,7 @@ p {
     -ms-transform: rotate(30deg);
     -webkit-transform: rotate(30deg);
     transform: rotate(30deg);
-    top: 65px;
+    top: 42px;
     left: 35px;
 
 }
@@ -393,12 +397,222 @@ p {
     }
 
 
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    
+    .col-md-6 {
+      position: relative;
+      min-height: 1px;
+      padding-right: 15px;
+      padding-left: 15px;
+      bottom: 50%;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -31px;
+      padding-left: 229px;
+    }
+
+
+    #section-title {
+      z-index: 2;
+      position: absolute;
+      margin-left: 4px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 83%;
+
+    }
+
+
+    
+    /*Mini column*/
+
+    .mini-hexagon {
+      position: relative;
+      width: 120px; 
+      height: 69.28px;
+      background-color:  #d6d6d6;
+      margin: 34.64px 0;
+
+        -ms-transform: rotate(30deg); /* IE 9 */  
+      -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+      transform: rotate(30deg);
+      margin-bottom: 68px;
+
+    }
+
+    .mini-hexagon:before,
+    .mini-hexagon:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent;
+
+    }
+
+    .mini-hexagon:before {
+      bottom: 100%;
+      border-bottom: 34.64px solid #d6d6d6;
+    }
+
+    .mini-hexagon:after {
+      top: 100%;
+      width: 0;
+      border-top: 34.64px solid #d6d6d6;
+    }
+
+
+    /*right column*/
+    .r-mini-hexagon {
+        position: relative;
+        width: 120px;
+        height: 69.28px;
+        background-color: #d6d6d6;
+        margin: 62.64px 0;
+        -ms-transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
+        transform: rotate(30deg);
+        top: 43px;
+        right: 32px;
+
+    }
+
+    .r-mini-hexagon:before,
+    .r-mini-hexagon:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent;
+
+    }
+
+    .r-mini-hexagon:before {
+      bottom: 100%;
+      border-bottom: 34.64px solid #d6d6d6;
+    }
+
+    .r-mini-hexagon:after {
+      top: 100%;
+      width: 0;
+      border-top: 34.64px solid #d6d6d6;
+    }
+
+    /*left column*/
+
+    .l-mini-hexagon {
+        position: relative;
+        width: 120px;
+        height: 69.28px;
+        background-color: #d6d6d6;
+        margin: 62.64px 0;
+        -ms-transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
+        transform: rotate(30deg);
+        top: 38px;
+        left: 35px;
+
+    }
+
+    .l-mini-hexagon:before,
+    .l-mini-hexagon:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent;
+
+    }
+
+    .l-mini-hexagon:before {
+      bottom: 100%;
+      border-bottom: 34.64px solid #d6d6d6;
+    }
+
+    .l-mini-hexagon:after {
+      top: 100%;
+      width: 0;
+      border-top: 34.64px solid #d6d6d6;
+    }
+
+
+    .left {
+      margin: auto;
+          display: flex;
+        justify-content: center;
+        align-items: center;  
+
+    }
+
+   .column1 {
+    position: relative;
+    top: 633px;
+    left: 250px;
+   }
+
+   .column2{
+
+   position: relative;
+    bottom: 603px;
+    left: -23px;
+   }
+
+
+    .button-login {
+      margin: 20px auto;
+      background-color: #ffc957;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 4px;
+      display: block;
+      width: 73%;
+      height: 30px;
+      font-style: bold;
+      border-style: none;
+
+    }
+
+    input
+    {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 5px;
+        color: #ffc957;
+        border-style: none;
+        display: inline-block;
+        width: 100%;
+        height: 34px;
+        text-transform: uppercase;
+    }
+
+    .form-input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+
+    }  
+}
+
     `],
     template : `
          <div class = "container">
         <div class = "row">
             <div class = ".col-xs-6 .col-md-4">
-                <div class = "row">
+                <div class = "row column1">
                     <div class="col-md-6">
                         <div class="l-mini-hexagon"></div>
                     </div>
@@ -444,7 +658,7 @@ p {
             <!-- End of Middle Column -->
 
             <div class = ".col-xs-6 .col-md-4">
-                <div class = "row">
+                <div class = "row column2">
                     <div class="col-md-6">
                         <div class="mini-hexagon"></div>
                         <div class="mini-hexagon"></div>

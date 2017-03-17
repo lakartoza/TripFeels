@@ -52,10 +52,9 @@ h2, h3{
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 155px;
+    top: 157px;
+    position: relative
+
 }
 
 .fa-plus-circle {
@@ -107,6 +106,7 @@ h2, h3{
 }
 .hex-container {
      margin-top: 88px;
+     padding-bottom: 19px;
 }
 
 #trip-text2 {
@@ -133,7 +133,7 @@ h2, h3{
     -webkit-transform: rotate(30deg);
     transform: rotate(30deg);
     top: 231px;
-    right: 64px;
+    right: 354px;
 
 }
 
@@ -169,8 +169,8 @@ h2, h3{
     -ms-transform: rotate(30deg);
     -webkit-transform: rotate(30deg);
     transform: rotate(30deg);
-    top: 231px;
-    left: 64px;
+    top: 236px;
+    left: 356px;
 
 }
 
@@ -204,6 +204,168 @@ h2, h3{
     display: table; 
 
 }
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+  
+
+  .container {
+    margin-top: 0px;
+    bottom: 15px;
+    position: relative;
+  }
+
+  .hex-container {
+    margin-top: 88px;
+    padding-bottom: 31px;
+  }
+  h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffc957;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  .fa-plus-circle {
+    font-size: 35px;
+   }
+
+  #trip-text {
+     text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    z-index: 2;
+    position: absolute;
+    margin-left: 12px;
+    margin-top: 23px;
+    }
+  .hexagon {
+    position: relative;
+    width: 200px; 
+    height: 115.47px;
+    background-color: #f7f6f6;
+    margin: 57.74px 0;
+    margin: -17px;
+    -ms-transform: rotate(-30deg); /* IE 9 */  
+    -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+    transform: rotate(-30deg);
+    z-index: 1;
+}
+
+    .hexagon:before,
+    .hexagon:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+    }
+
+    .hexagon:before {
+      bottom: 100%;
+      border-bottom: 57.74px solid #f7f6f6;
+    }
+
+    .hexagon:after {
+      top: 100%;
+      width: 0;
+      border-top: 57.74px solid #f7f6f6;
+    }
+    /*Side Hexagons*/
+    /*right column*/
+    .r-mini-hexagon {
+        position: relative;
+        width: 100px; 
+        height: 57.74px;
+        background-color: #d6d6d6;
+        margin: 28.87px 0;
+        -ms-transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
+        transform: rotate(30deg);
+        top: 174px;
+
+
+        left: -6px;
+    }
+
+    .r-mini-hexagon:before,
+    .r-mini-hexagon:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+
+    }
+
+    .r-mini-hexagon:before {
+      bottom: 100%;
+      border-bottom: 28.87px solid #d6d6d6;
+    }
+
+    .r-mini-hexagon:after {
+      top: 100%;
+      width: 0;
+      border-top: 28.87px solid #d6d6d6;
+    }
+
+    /*left column*/
+
+    .l-mini-hexagon {
+        position: relative;
+        width: 100px; 
+        height: 57.74px;
+        background-color: #d6d6d6;
+        margin: 28.87px 0;
+        -ms-transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
+        transform: rotate(30deg);
+        top: 168px;
+        left: 8px;
+
+    }
+
+    .l-mini-hexagon:before,
+    .l-mini-hexagon:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+
+    }
+
+    .l-mini-hexagon:before {
+      bottom: 100%;
+      border-bottom: 28.87px solid #d6d6d6;
+    }
+
+    .l-mini-hexagon:after {
+      top: 100%;
+      width: 0;
+      border-top: 28.87px solid #d6d6d6;
+    }
+
+
+    .left {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: table; 
+
+    }
+
+}
+
     `],
     template : `
            <div class = "container">
@@ -229,7 +391,7 @@ h2, h3{
 		   		</div>
 		    	<div class ="hex-container">
 			    	<div id = "trip-text-2">
-						 	<h2> RECENT TRIP #1 </h2> <p>
+						 	<h2> </h2> <p>
 
 					</div>
 					

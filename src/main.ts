@@ -18,6 +18,7 @@ import {
   NoteCard,
   NoteCreator,
   ColorPicker,
+ 
 } from './app/ui'
 
 @NgModule({
@@ -33,6 +34,7 @@ import {
     Login,
     Trips,
     ControlMessagesComponent,
+
     // AppModal
   ],
   providers: [ValidationService, NoteService, ApiService ],

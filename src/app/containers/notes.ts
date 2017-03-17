@@ -8,6 +8,8 @@ import { NoteService, ApiService } from '../services/';
   .bs-note {
     display: inline-block;
     text-align: center;
+    width: 16%;
+    padding-left: 12px;
   }
   `],
   template: `
@@ -23,6 +25,7 @@ import { NoteService, ApiService } from '../services/';
             (checked)="onNoteChecked($event)"
             >
         </note-card>
+
     </div>
 </div>
   `
@@ -49,4 +52,5 @@ export class Notes {
         this.notes.splice(i, 1);
       })
     }  
+
 }

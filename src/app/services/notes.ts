@@ -19,5 +19,12 @@ export class NoteService {
         return this.apiService.delete(`${this.
             path}/${note.id}`)
     }
+    // addVote(note) {
+
+    // }
+
+    // downVote(note) {
+
+    // }
 
 }

@@ -127,17 +127,18 @@ export class NoteCreator {
  
  @Output() createNote = new EventEmitter();
   colors: Array<string> = ['#B19CD9', '#FF6961', '#77DD77', '#FFC957'];
+  // icons: Array<string> = ['', '#FF6961', '#77DD77', '#FFC957'];
 
   newNote = {
     title: '',
     value: '',
-    color: 'white'
+    color: 'white',
   };
 
   fullForm: boolean = false;
 
   onCreateNote() {
-    const { title, value, color } = this.newNote;
+    const { title, value, color} = this.newNote;
 
     if (value) {
       var colorChoice = []; 

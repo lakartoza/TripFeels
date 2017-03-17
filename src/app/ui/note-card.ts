@@ -9,14 +9,19 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styles: [`
   
 * {
-    margin: 0;
+    
     padding: 0;
 }
 body {
     /*background: rgb(123, 158, 158);*/
 }
-#hexGrid {
-  display: flex;
+
+.container {
+  align-items: flex-start | flex-end | center | baseline | stretch;
+}
+
+.hexGrid {
+  display: inline-table;
   flex-wrap: wrap;
   width: 90%;
   margin: 0 auto;
@@ -26,16 +31,6 @@ body {
   list-style-type: none;
 }
 
-.hex {
-  position: relative;
-  visibility:hidden;
-  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
-}
-.hex::after{
-  content:'';
-  display:block;
-  padding-bottom: 86.602%;  /* =  100 / tan(60) * 1.5 */
-}
 .hexIn{
   position: absolute;
   width:96%;
@@ -65,58 +60,7 @@ body {
             transform: skewY(-30deg) rotate3d(0,0,1,60deg);
 }
 
-/*** HEX CONTENT **********************************************************************/
-.hex img {
-  left: -100%;
-  right: -100%;
-  width: auto;
-  height: 100%;
-  margin: 0 auto;
-  -webkit-transform: rotate3d(0,0,0,0deg);
-      -ms-transform: rotate3d(0,0,0,0deg);
-          transform: rotate3d(0,0,0,0deg);
-}
 
-.hex h1, .hex p {
-  width: 100%;
-  padding: 5%;
-  box-sizing:border-box;
-  background-color: rgba(0, 128, 128, 0.8);
-  font-weight: 300;
-  -webkit-transition:  -webkit-transform .2s ease-out, opacity .3s ease-out;
-          transition:          transform .2s ease-out, opacity .3s ease-out;
-  z-index: 20;
-  position: absolute;
-}
-.hex h1 {
-  bottom: 50%;
-  padding-top:50%;
-  font-size: 1.5em;
-  z-index: 1;
-  -webkit-transform:translate3d(0,-100%,0);
-      -ms-transform:translate3d(0,-100%,0);
-          transform:translate3d(0,-100%,0);
-}
-.hex h1::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 45%;
-  width: 10%;
-  text-align: center;
-  border-bottom: 1px solid #fff;
-}
-.hex p {
-  top: 50%;
-  padding-bottom:50%;
-  -webkit-transform:translate3d(0,100%,0);
-      -ms-transform:translate3d(0,100%,0);
-          transform:translate3d(0,100%,0);
-
-    z-index: 20;
-  position: absolute;
-
-}
 
 
 /*** HOVER EFFECT  **********************************************************************/
@@ -129,7 +73,7 @@ body {
 */
 /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
 @media (min-width:1201px) { /* <- 5-4  hexagons per row */
-  #hexGrid{
+  .hexGrid{
     padding-bottom: 4.4%
   }
   .hex {
@@ -141,7 +85,7 @@ body {
 }
 
 @media (max-width: 1200px) and (min-width:901px) { /* <- 4-3  hexagons per row */
-  #hexGrid{
+  .hexGrid{
     padding-bottom: 5.5%
   }
   .hex {
@@ -153,7 +97,7 @@ body {
 }
 
 @media (max-width: 900px) and (min-width:601px) { /* <- 3-2  hexagons per row */
-  #hexGrid{
+  .hexGrid{
     padding-bottom: 7.4%
   }
   .hex {
@@ -165,7 +109,7 @@ body {
 }
 
 @media (max-width: 600px) { /* <- 2-1  hexagons per row */
-  #hexGrid{
+  .hexGrid{
     padding-bottom: 11.2%
   }
   .hex {
@@ -177,7 +121,7 @@ body {
 }
 
 @media (max-width: 400px) {
-    #hexGrid {
+    .hexGrid {
         font-size: 13px;
     }
 }
@@ -190,38 +134,319 @@ body {
 }
 
 .bs-hex-image {
-  width: 300px;
-  height: 289px;
+  width: 249px;
   position: relative;
+  padding-left: 14px;
 }
 
 .bs-hex-text {
     position: relative;
-    top: -201px;
-    width: 100%;
+    top: -175px;
+    margin: auto;
+    text-align: left;
+    color: white;
+    letter-spacing: 2px;
+    width: 0%;
+    padding-left: 20px;
+    text-transform: uppercase;
 }
+
+.h2 {
+  width: 100%;
+}
+
+.container {
+  width: 34%;
+}
+
+.fa-sort-asc {
+      left: 150px;
+    top: -75px;
+    /* font-size: 14px; */
+    position: relative;
+
+}
+
+.fa-sort-desc{
+    left: 150px;
+    position: relative;
+    top: -79px;
+
+}
+
+.vote-arrows {
+    position: relative;
+    top: -9px;
+    text-align: center;
+
+}
+
+#vote-num {
+    font-size: 39px;
+    left: 150px;
+    bottom: 74px;
+    position: relative;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+     .bs-hex-image {
+      width: 249px;
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .bs-hex-text {
+        position: relative;
+        top: -175px;
+        margin: auto;
+        text-align: left;
+        color: white;
+        letter-spacing: 2px;
+        width: 0%;
+        padding-left: 20px;
+        text-transform: uppercase;
+    }
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+    .bs-hex-image {
+      width: 249px;
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .bs-hex-text {
+        position: relative;
+        top: -175px;
+        margin: auto;
+        text-align: left;
+        color: white;
+        letter-spacing: 2px;
+        width: 0%;
+        padding-left: 20px;
+        text-transform: uppercase;
+    }
+
+    .h2 {
+        width: 100%;
+    }
+
+      .container {
+        width: 34%;
+      }
+
+      .fa-sort-asc {
+            left: 150px;
+          top: -75px;
+          /* font-size: 14px; */
+          position: relative;
+
+      }
+
+      .fa-sort-desc{
+          left: 150px;
+          position: relative;
+          top: -79px;
+
+      }
+
+      .vote-arrows {
+          position: relative;
+          top: -9px;
+          text-align: center;
+
+      }
+
+      #vote-num {
+          font-size: 39px;
+          left: 150px;
+          bottom: 74px;
+          position: relative;
+      }
+
+      .flex-container {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        
+        -webkit-flex-flow: row wrap;
+        justify-content: space-around;
+      }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+    .bs-hex-image {
+      width: 249px;
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .bs-hex-text {
+        position: relative;
+        top: -175px;
+        margin: auto;
+        text-align: left;
+        color: white;
+        letter-spacing: 2px;
+        width: 0%;
+        padding-left: 20px;
+        text-transform: uppercase;
+    }
+
+    .h2 {
+      width: 100%;
+    }
+
+    .container {
+      width: 34%;
+    }
+
+    .fa-sort-asc {
+          left: 150px;
+        top: -75px;
+        /* font-size: 14px; */
+        position: relative;
+
+    }
+
+    .fa-sort-desc{
+        left: 150px;
+        position: relative;
+        top: -79px;
+
+    }
+
+    .vote-arrows {
+        position: relative;
+        top: -9px;
+        text-align: center;
+
+    }
+
+    #vote-num {
+        font-size: 39px;
+        left: 150px;
+        bottom: 74px;
+        position: relative;
+    }
+
+    .flex-container {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      
+      -webkit-flex-flow: row wrap;
+      justify-content: space-around;
+    }
+
+}
+
+
+
+
+
+
+
+
 `],
   template: `
-    <div
-      [ngStyle]="{'background-color': 'white'}"
-      (mouseenter)="toggleCheck()"
-      (mouseleave)="toggleCheck()"
-      >
-        <div class="icon" *ngIf="showCheck" (click)="onChecked()">
-            <i class="material-icons">check</i>
-        </div>
-        <div class="">
-          <div class="" href="#">
-            <img class="bs-hex-image" src="/public/images/{{ note.title }}.png" alt="" />
-            <h2 class="bs-hex-text value">{{ note.value }}</h2>
+  <div class = "flex-container">
+    <div class = "hexGrid flex-item">
+      <div
+        [ngStyle]="{'background-color': 'white'}"
+        (mouseenter)="toggleCheck()"
+        (mouseleave)="toggleCheck()"
+        >
+          <div class="icon" *ngIf="showCheck" (click)="onChecked()">
+            <i class="fa fa-times fa-3x" aria-hidden="true" style="color: #ffc957"></i>
           </div>
-        </div>
+
+       
+            <div class="hex " href="#">
+              <img class="bs-hex-image" src="/public/images/{{ note.title }}.png" alt="" />
+              <div class ="text-box">
+
+                <h2 class="bs-hex-text value">{{ note.value }}</h2>
+                <div class = "bs-hex-text">
+                  <div class = "vote-arrows">
+                    <div id = "fa-sort-asc" (click)="upVote()">
+                      <i class="fa fa-sort-asc fa-3x" aria-hidden="true"></i> 
+                    </div>  
+
+                    <div id = "vote-num">
+                      {{myVote + voteCount}}
+                    </div> 
+
+                    <div id = "fa-sort-desc" (click) ="downVote()">
+                      <i class="fa fa-sort-desc fa-3x" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+         
+       </div>
       </div>
+    </div>
   `
 })
 export class NoteCard {
   @Input() note = {};
+  @Input() voteCount = 0;
+  @Input() myVote = 0;
   @Output() checked = new EventEmitter();
+  @Output('vote') change = new EventEmitter();
+
+
 
   showCheck: boolean = false;
 
@@ -232,6 +457,36 @@ export class NoteCard {
   onChecked() {
     this.checked.next(this.note);
   }
+
+ 
+  upVote() {
+      if (this.myVote == +1) {
+        this.myVote++;
+          return;
+      }
+
+      this.myVote++;
+      this.emitEvent();
+  }
+
+  downVote() {
+      if (this.myVote => 0) {
+          this.myVote--;
+          return;
+      }
+
+      this.myVote--;
+      this.emitEvent();
+  }
+
+  emitEvent() {
+      this.change.emit({myVote: this.myVote});
+  }
+
+
+
+
+
 }
 
 
