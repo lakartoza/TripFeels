@@ -5,8 +5,31 @@ import { ContactDetailsComponent } from '../contact-details/contact-details.comp
 
 @Component({
   selector: 'contact-list',
-  templateUrl: './contact-list.component.html',
-  styleUrls: ['./contact-list.component.css'],
+  template: `
+  <div class="row">
+  <div class="col-md-5">
+    <h2>Contacts</h2>
+    <ul class="list-group">
+      <li class="list-group-item"
+        *ngFor="let contact of contacts"
+        (click)="selectContact(contact)"
+        [class.active]="contact === selectedContact">
+        {{contact.name}}
+      </li>
+    </ul>
+    <button class="btn btn-warning" (click)="createNewContact()">New</button>
+  </div>
+  <div class="col-md-5 col-md-offset-2">
+    <contact-details
+      [contact]="selectedContact"
+      [createHandler]="addContact"
+      [updateHandler]="updateContact"
+      [deleteHandler]="deleteContact">
+    </contact-details>
+  </div>
+</div>
+  `,
+  // styleUrls: ['./contact-list.component.css'],
   providers: [ContactService]
 })
 

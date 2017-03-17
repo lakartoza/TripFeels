@@ -1,4 +1,11 @@
-<div *ngIf="contact" class="row">
+import { Component, Input } from '@angular/core';
+import { Contact } from '../contact';
+import { ContactService } from '../contact.service';
+
+@Component({
+  selector: 'contact-details',
+  template: `
+  <div *ngIf="contact" class="row">
   <div class="col-md-12">
     <h2 *ngIf="contact._id">Contact Details</h2>
     <h2 *ngIf="!contact._id">New Contact</h2>
@@ -27,3 +34,38 @@
     <button class="btn btn-danger" *ngIf="contact._id" (click)="deleteContact(contact._id)">Delete</button>
   </form>
 </div>
+  `
+  // styleUrls: ['./contact-details.component.css']
+})
+
+export class ContactDetailsComponent {
+  @Input()
+  contact: Contact;
+
+  @Input()
+  createHandler: Function;
+  @Input()
+  updateHandler: Function;
+  @Input()
+  deleteHandler: Function;
+
+  constructor (private contactService: ContactService) {}
+
+  createContact(contact: Contact) {
+    this.contactService.createContact(contact).then((newContact: Contact) => {
+      this.createHandler(newContact);
+    });
+  }
+
+  updateContact(contact: Contact): void {
+    this.contactService.updateContact(contact).then((updatedContact: Contact) => {
+      this.updateHandler(updatedContact);
+    });
+  }
+
+  deleteContact(contactId: String): void {
+    this.contactService.deleteContact(contactId).then((deletedContactId: String) => {
+      this.deleteHandler(deletedContactId);
+    });
+  }
+}

@@ -11,7 +11,8 @@ import { ControlMessagesComponent } from './app/containers/control-messages.comp
 import { ValidationService } from './app/containers/validation.service';
 import { ModalModule } from 'angular2-modal';
 import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
-// import { AppModal }   from './app/ui/note-creator/modal.component';
+import { ContactListComponent } from './app/contacts/contact-list/contact-list.component'
+import { ContactDetailsComponent } from './app/contacts/contact-details/contact-details.component'
 
 import { 
   AppBar,
@@ -33,6 +34,8 @@ import {
     Login,
     Trips,
     ControlMessagesComponent,
+    ContactListComponent,
+    ContactDetailsComponent
     // AppModal
   ],
   providers: [ValidationService, NoteService, ApiService ],
@@ -42,7 +45,7 @@ import {
      FormsModule, 
      routes, 
      ReactiveFormsModule,     
-     BrowserModule, 
+     BrowserModule
      // ModalModule.forRoot(),
      // BootstrapModalModule 
    ],
