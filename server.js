@@ -66,8 +66,8 @@ module.exports = {
       var newContact = req.body;
       newContact.createDate = new Date();
 
-      if (!req.body.name) {
-        handleError(res, "Invalid user input", "Must provide a name.", 400);
+      if (!req.body.value) {
+        handleError(res, "Invalid user input", "Must provide a value.", 400);
       }
 
       db.collection(CONTACTS_COLLECTION).insertOne(newContact, function(err, doc) {

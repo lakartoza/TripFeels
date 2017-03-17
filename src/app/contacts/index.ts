@@ -1,4 +1,3 @@
-export { ContactDetailsComponent } from './contact-details/contact-details.component';
-export { ContactListComponent } from './contact-list/contact-list.component';
-export { ContactService } from './contact.service';
-
+// export { ContactDetailsComponent } from './contact-details.component';
+// export { ContactListComponent } from './contact-list.component';
+export { Contact } from './contact';

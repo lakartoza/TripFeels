@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Contact } from './contact';
+import { Contact } from '../contacts/contact';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
@@ -10,7 +10,7 @@ export class ContactService {
     constructor (private http: Http) {}
 
     // get("/api/contacts")
-    getContacts(): Promise<Contact[]> {
+    getNotes(): Promise<Contact[]> {
       return this.http.get(this.contactsUrl)
                  .toPromise()
                  .then(response => response.json() as Contact[])
@@ -18,7 +18,7 @@ export class ContactService {
     }
 
     // post("/api/contacts")
-    createContact(newContact: Contact): Promise<Contact> {
+    createNote(newContact: Contact): Promise<Contact> {
       return this.http.post(this.contactsUrl, newContact)
                  .toPromise()
                  .then(response => response.json() as Contact)

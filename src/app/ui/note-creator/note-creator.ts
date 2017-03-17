@@ -179,34 +179,3 @@ export class NoteCreator {
     
   }
 }
-
-
-
-
-
-  //Data of all images
-  // private hex1= {
-  //   photo: '1.png'
-  // };
-  // private hex2 = {
-  //   photo: '2.png'
-  // };
-  // private hex3= {
-  //   photo: '3.png'
-  // };
-  // private hex4 = {
-  //   photo: '4.png'
-  // };
-  // private hex5= {
-  //   photo: '5.png'
-  // };
-  // private hex6 = {
-  //   photo: '.png'
-  // };
-
-  // private activity1 = this.hex1;
-  // private activity2 = this.hex2;
-  // private activity3 = this.hex3;
-  // private activity4 = this.hex4;
-  // private activity5 = this.hex5;
-  // private activity6 = this.hex6;

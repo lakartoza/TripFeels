@@ -1,5 +1,5 @@
 import { Contact } from './contacts/contact'
-import {ContactListComponent} from './contacts/contact-list/contact-list.component'
+// import {ContactListComponent} from './contacts/'
 import { RouterModule } from '@angular/router'
 import { ModuleWithProviders } from '@angular/core'
 import {  Main, Notes, AddTrip, Login,  Trips}   from './containers'
@@ -13,7 +13,8 @@ export const routes: ModuleWithProviders = RouterModule.forRoot([
             { path: 'addtrip', component: AddTrip },
             // { path: '', component: Login },
             { path: 'trips', component: Trips },
-            { path: '', component: ContactListComponent}
+            { path: '', component: Notes}
+            // { path: '', component: ContactListComponent}
         ]
     },
     { path : '**', redirectTo: ''}

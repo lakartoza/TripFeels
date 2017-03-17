@@ -11,8 +11,8 @@ import { ControlMessagesComponent } from './app/containers/control-messages.comp
 import { ValidationService } from './app/containers/validation.service';
 import { ModalModule } from 'angular2-modal';
 import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
-import { ContactListComponent } from './app/contacts/contact-list/contact-list.component'
-import { ContactDetailsComponent } from './app/contacts/contact-details/contact-details.component'
+// import { ContactListComponent } from './app/contacts/';
+// import { ContactDetailsComponent } from './app/contacts';
 
 import { 
   AppBar,
@@ -34,8 +34,8 @@ import {
     Login,
     Trips,
     ControlMessagesComponent,
-    ContactListComponent,
-    ContactDetailsComponent
+    // ContactListComponent,
+    // ContactDetailsComponent
     // AppModal
   ],
   providers: [ValidationService, NoteService, ApiService ],
